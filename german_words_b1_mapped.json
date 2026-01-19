@@ -1,0 +1,4402 @@
+[
+  {
+    "word": "Einfach",
+    "translate_ger": "Einfach",
+    "translate_rus": "простой, легко",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Artikel",
+    "translate_ger": "Artikel",
+    "translate_rus": "артикль, статья",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Abfall",
+    "translate_ger": "Abfall",
+    "translate_rus": "отходы",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Abflug",
+    "translate_ger": "Abflug",
+    "translate_rus": "отлет",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Absage",
+    "translate_ger": "Absage",
+    "translate_rus": "отказ",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "aktiv",
+    "translate_ger": "aktiv",
+    "translate_rus": "активный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Alkohol",
+    "translate_ger": "Alkohol",
+    "translate_rus": "алкоголь",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "angenehm",
+    "translate_ger": "angenehm",
+    "translate_rus": "приятный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "annulliert",
+    "translate_ger": "annulliert",
+    "translate_rus": "аннулированный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Anzeigetafel",
+    "translate_ger": "Anzeigetafel",
+    "translate_rus": "табло",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Aufruf",
+    "translate_ger": "Aufruf",
+    "translate_rus": "вызов",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Ausgang",
+    "translate_ger": "Ausgang",
+    "translate_rus": "выход",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Ausstattung",
+    "translate_ger": "Ausstattung",
+    "translate_rus": "оборудование",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Behälter",
+    "translate_ger": "Behälter",
+    "translate_rus": "емкость",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "betreten",
+    "translate_ger": "betreten",
+    "translate_rus": "входить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Bordkarte",
+    "translate_ger": "Bordkarte",
+    "translate_rus": "посадочный талон",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Campingplatz",
+    "translate_ger": "Campingplatz",
+    "translate_rus": "площадка для кемпинга",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Check-in-Schalter",
+    "translate_ger": "Check-in-Schalter",
+    "translate_rus": "стойка регистрации",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Container",
+    "translate_ger": "Container",
+    "translate_rus": "контейнер",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Dienstreise",
+    "translate_ger": "Dienstreise",
+    "translate_rus": "командировка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Doppelbett",
+    "translate_ger": "Doppelbett",
+    "translate_rus": "двуспальная кровать",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Doppelzimmer",
+    "translate_ger": "Doppelzimmer",
+    "translate_rus": "двухместный номер",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "einchecken",
+    "translate_ger": "einchecken",
+    "translate_rus": "регистрироваться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Einsteigezeit",
+    "translate_ger": "Einsteigezeit",
+    "translate_rus": "время посадки",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Einzelzimmer",
+    "translate_ger": "Einzelzimmer",
+    "translate_rus": "одноместный номер",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "erleben",
+    "translate_ger": "erleben",
+    "translate_rus": "пережить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Flug",
+    "translate_ger": "Flug",
+    "translate_rus": "полет",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Fluggast",
+    "translate_ger": "Fluggast",
+    "translate_rus": "пассажир",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Fluggesellschaft",
+    "translate_ger": "Fluggesellschaft",
+    "translate_rus": "авиакомпания",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "führen",
+    "translate_ger": "führen",
+    "translate_rus": "вести",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "füttern",
+    "translate_ger": "füttern",
+    "translate_rus": "кормить животных",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Gate",
+    "translate_ger": "Gate",
+    "translate_rus": "выход на посадку",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Gepäck",
+    "translate_ger": "Gepäck",
+    "translate_rus": "багаж",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Gepäckausgabe",
+    "translate_ger": "Gepäckausgabe",
+    "translate_rus": "выдача багажа",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Gepäckband",
+    "translate_ger": "Gepäckband",
+    "translate_rus": "багажная лента",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "gestattet",
+    "translate_ger": "gestattet",
+    "translate_rus": "разрешенный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Halbpension",
+    "translate_ger": "Halbpension",
+    "translate_rus": "полупансион",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Handgepäck",
+    "translate_ger": "Handgepäck",
+    "translate_rus": "ручная кладь",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "historisch",
+    "translate_ger": "historisch",
+    "translate_rus": "исторический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Hostel",
+    "translate_ger": "Hostel",
+    "translate_rus": "хостел",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "hygienisch",
+    "translate_ger": "hygienisch",
+    "translate_rus": "гигиеничный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Inlineskaten",
+    "translate_ger": "Inlineskaten",
+    "translate_rus": "кататься на роликовых коньках",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Jugendherberge",
+    "translate_ger": "Jugendherberge",
+    "translate_rus": "молодежная гостиница",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Katalog",
+    "translate_ger": "Katalog",
+    "translate_rus": "каталог",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "klettern",
+    "translate_ger": "klettern",
+    "translate_rus": "взбираться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "komfortabel",
+    "translate_ger": "komfortabel",
+    "translate_rus": "комфортный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Lage",
+    "translate_ger": "Lage",
+    "translate_rus": "местоположение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Lagerfeuer",
+    "translate_ger": "Lagerfeuer",
+    "translate_rus": "костер",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "landen",
+    "translate_ger": "landen",
+    "translate_rus": "совершать посадку",
+    "gender": null,
+    "type": "Verb",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Lärm",
+    "translate_ger": "Lärm",
+    "translate_rus": "шум",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Lautsprecherdurchsage",
+    "translate_ger": "Lautsprecherdurchsage",
+    "translate_rus": "объявление по громкой связи",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "lebhaft",
+    "translate_ger": "lebhaft",
+    "translate_rus": "оживленный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Leine",
+    "translate_ger": "Leine",
+    "translate_rus": "поводок",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Leuchtturm",
+    "translate_ger": "Leuchtturm",
+    "translate_rus": "маяк",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Meerblick",
+    "translate_ger": "Meerblick",
+    "translate_rus": "вид на море",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "mitten",
+    "translate_ger": "mitten",
+    "translate_rus": "среди",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "дом"
+  },
+  {
+    "word": "Nebel",
+    "translate_ger": "Nebel",
+    "translate_rus": "туман",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "neblig",
+    "translate_ger": "neblig",
+    "translate_rus": "туманный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Paradies",
+    "translate_ger": "Paradies",
+    "translate_rus": "рай",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Passkontrolle",
+    "translate_ger": "Passkontrolle",
+    "translate_rus": "паспортный контроль",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Pilotenstreik",
+    "translate_ger": "Pilotenstreik",
+    "translate_rus": "забастовка пилотов",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Pool",
+    "translate_ger": "Pool",
+    "translate_rus": "бассейн",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "rechtzeitig",
+    "translate_ger": "rechtzeitig",
+    "translate_rus": "вовремя",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "работа"
+  },
+  {
+    "word": "Reisebüro",
+    "translate_ger": "Reisebüro",
+    "translate_rus": "бюро путешествий",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Reiseplan",
+    "translate_ger": "Reiseplan",
+    "translate_rus": "план поездки",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Reiseplanung",
+    "translate_ger": "Reiseplanung",
+    "translate_rus": "планирование поездки",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "reiten",
+    "translate_ger": "reiten",
+    "translate_rus": "кататься на лошадях",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "Ruhezeit",
+    "translate_ger": "Ruhezeit",
+    "translate_rus": "тихий час",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "sauber",
+    "translate_ger": "sauber",
+    "translate_rus": "чистый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sauberkeit",
+    "translate_ger": "Sauberkeit",
+    "translate_rus": "чистота",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Schalter",
+    "translate_ger": "Schalter",
+    "translate_rus": "стойка",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Schlange",
+    "translate_ger": "Schlange",
+    "translate_rus": "очередь",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Sonnenschirm",
+    "translate_ger": "Sonnenschirm",
+    "translate_rus": "зонтик от солнца",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Sonnenterrasse",
+    "translate_ger": "Sonnenterrasse",
+    "translate_rus": "солнечная терраса",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sonnenuntergang",
+    "translate_ger": "Sonnenuntergang",
+    "translate_rus": "закат солнца",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Stern",
+    "translate_ger": "Stern",
+    "translate_rus": "звезда",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "stören",
+    "translate_ger": "stören",
+    "translate_rus": "мешать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Streichholz",
+    "translate_ger": "Streichholz",
+    "translate_rus": "спичка",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "streiken",
+    "translate_ger": "streiken",
+    "translate_rus": "бастовать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Taschenlampe",
+    "translate_ger": "Taschenlampe",
+    "translate_rus": "карманный фонарь",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Taschenmesser",
+    "translate_ger": "Taschenmesser",
+    "translate_rus": "карманный нож",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "traumhaft",
+    "translate_ger": "traumhaft",
+    "translate_rus": "сказочный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "übernachten",
+    "translate_ger": "übernachten",
+    "translate_rus": "ночевать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Übernachtung",
+    "translate_ger": "Übernachtung",
+    "translate_rus": "ночевка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Umgebung",
+    "translate_ger": "Umgebung",
+    "translate_rus": "окрестности",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "umgehend",
+    "translate_ger": "umgehend",
+    "translate_rus": "немедленно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "работа"
+  },
+  {
+    "word": "verärgert",
+    "translate_ger": "verärgert",
+    "translate_rus": "рассерженный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "verreisen",
+    "translate_ger": "verreisen",
+    "translate_rus": "отъезжать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "путешествия"
+  },
+  {
+    "word": "verschieben",
+    "translate_ger": "verschieben",
+    "translate_rus": "перемещать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Wanderer",
+    "translate_ger": "Wanderer",
+    "translate_rus": "турист",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Wandertour",
+    "translate_ger": "Wandertour",
+    "translate_rus": "маршрут похода",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Waschraum",
+    "translate_ger": "Waschraum",
+    "translate_rus": "комната для умывания",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Wohnwagen",
+    "translate_ger": "Wohnwagen",
+    "translate_rus": "жилой автомобиль",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Zelt",
+    "translate_ger": "Zelt",
+    "translate_rus": "палатка",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Zoll",
+    "translate_ger": "Zoll",
+    "translate_rus": "таможня",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Zuschlag",
+    "translate_ger": "Zuschlag",
+    "translate_rus": "прибавка",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "absprechen",
+    "translate_ger": "absprechen",
+    "translate_rus": "договориться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Abstellplatz",
+    "translate_ger": "Abstellplatz",
+    "translate_rus": "место стоянки",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "akzeptieren",
+    "translate_ger": "akzeptieren",
+    "translate_rus": "давать согласие",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "anstreichen",
+    "translate_ger": "anstreichen",
+    "translate_rus": "наносить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Ärger",
+    "translate_ger": "Ärger",
+    "translate_rus": "досада",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "ärgerlich",
+    "translate_ger": "ärgerlich",
+    "translate_rus": "досадный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Aufregung",
+    "translate_ger": "Aufregung",
+    "translate_rus": "волнение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Ausnahme",
+    "translate_ger": "Ausnahme",
+    "translate_rus": "исключение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Balkongeländer",
+    "translate_ger": "Balkongeländer",
+    "translate_rus": "перила балкона",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "befestigen",
+    "translate_ger": "befestigen",
+    "translate_rus": "укреплять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "behalten",
+    "translate_ger": "behalten",
+    "translate_rus": "оставлять у себя",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "beleidigen",
+    "translate_ger": "beleidigen",
+    "translate_rus": "оскорблять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Beleidigung",
+    "translate_ger": "Beleidigung",
+    "translate_rus": "оскорбление",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "berechtigt",
+    "translate_ger": "berechtigt",
+    "translate_rus": "справедливый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "beschimpfen",
+    "translate_ger": "beschimpfen",
+    "translate_rus": "ругать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Beschimpfung",
+    "translate_ger": "Beschimpfung",
+    "translate_rus": "оскорбление",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "beschweren",
+    "translate_ger": "beschweren",
+    "translate_rus": "жаловаться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Blumentopf",
+    "translate_ger": "Blumentopf",
+    "translate_rus": "цветочный горшок",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "bohren",
+    "translate_ger": "bohren",
+    "translate_rus": "сверлить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "deswegen",
+    "translate_ger": "deswegen",
+    "translate_rus": "поэтому",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "dumm",
+    "translate_ger": "dumm",
+    "translate_rus": "глупый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "eilig",
+    "translate_ger": "eilig",
+    "translate_rus": "срочный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "einhalten",
+    "translate_ger": "einhalten",
+    "translate_rus": "соблюдать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "einlegen",
+    "translate_ger": "einlegen",
+    "translate_rus": "вкладывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "einstellen",
+    "translate_ger": "einstellen",
+    "translate_rus": "устанавливать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "enden",
+    "translate_ger": "enden",
+    "translate_rus": "заканчивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Entscheidung",
+    "translate_ger": "Entscheidung",
+    "translate_rus": "решение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "entspannend",
+    "translate_ger": "entspannend",
+    "translate_rus": "расслабляющий",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "entsprechen",
+    "translate_ger": "entsprechen",
+    "translate_rus": "соответствовать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "erhöhen",
+    "translate_ger": "erhöhen",
+    "translate_rus": "повышать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "erleichtern",
+    "translate_ger": "erleichtern",
+    "translate_rus": "облегчать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "erwähnen",
+    "translate_ger": "erwähnen",
+    "translate_rus": "упоминать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "eskalieren",
+    "translate_ger": "eskalieren",
+    "translate_rus": "обострять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "exotisch",
+    "translate_ger": "exotisch",
+    "translate_rus": "экзотический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "еда"
+  },
+  {
+    "word": "fair",
+    "translate_ger": "fair",
+    "translate_rus": "справедливый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "festkleben",
+    "translate_ger": "festkleben",
+    "translate_rus": "приклеивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Freude",
+    "translate_ger": "Freude",
+    "translate_rus": "радость",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Frist",
+    "translate_ger": "Frist",
+    "translate_rus": "срок",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "fristgerecht",
+    "translate_ger": "fristgerecht",
+    "translate_rus": "в срок",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "fristlos",
+    "translate_ger": "fristlos",
+    "translate_rus": "бессрочный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Gemeinschaftsraum",
+    "translate_ger": "Gemeinschaftsraum",
+    "translate_rus": "общественное помещение",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "gesetzlich",
+    "translate_ger": "gesetzlich",
+    "translate_rus": "законный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "hämmern",
+    "translate_ger": "hämmern",
+    "translate_rus": "колотить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "heizen",
+    "translate_ger": "heizen",
+    "translate_rus": "отапливать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Instandhaltung",
+    "translate_ger": "Instandhaltung",
+    "translate_rus": "техническое обслуживание",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "klug",
+    "translate_ger": "klug",
+    "translate_rus": "умный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Konflikt",
+    "translate_ger": "Konflikt",
+    "translate_rus": "конфликт",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Kündigung",
+    "translate_ger": "Kündigung",
+    "translate_rus": "увольнение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "lüften",
+    "translate_ger": "lüften",
+    "translate_rus": "проветривать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "massiv",
+    "translate_ger": "massiv",
+    "translate_rus": "массивный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "meckern",
+    "translate_ger": "meckern",
+    "translate_rus": "ворчать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Meerschweinchen",
+    "translate_ger": "Meerschweinchen",
+    "translate_rus": "морская свинка",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Mieterhöhung",
+    "translate_ger": "Mieterhöhung",
+    "translate_rus": "повышение арендной платы",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Mietspiegel",
+    "translate_ger": "Mietspiegel",
+    "translate_rus": "таблица индексов квартплаты",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Mietvertrag",
+    "translate_ger": "Mietvertrag",
+    "translate_rus": "договор аренды",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Modernisierung",
+    "translate_ger": "Modernisierung",
+    "translate_rus": "модернизация",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "nachsehen",
+    "translate_ger": "nachsehen",
+    "translate_rus": "проверять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "neugierig",
+    "translate_ger": "neugierig",
+    "translate_rus": "любопытный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "obwohl",
+    "translate_ger": "obwohl",
+    "translate_rus": "хотя",
+    "gender": null,
+    "type": "Konjunktion",
+    "topic": "Школа"
+  },
+  {
+    "word": "offenbar",
+    "translate_ger": "offenbar",
+    "translate_rus": "очевидно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "protestieren",
+    "translate_ger": "protestieren",
+    "translate_rus": "протестовать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Rücksicht",
+    "translate_ger": "Rücksicht",
+    "translate_rus": "предупредительное отношение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "sammeln",
+    "translate_ger": "sammeln",
+    "translate_rus": "собирать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "sauer",
+    "translate_ger": "sauer",
+    "translate_rus": "недовольный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Schaden",
+    "translate_ger": "Schaden",
+    "translate_rus": "ущерб",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "schmutzig",
+    "translate_ger": "schmutzig",
+    "translate_rus": "грязный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "selbstverständlich",
+    "translate_ger": "selbstverständlich",
+    "translate_rus": "само собой разумеющийся",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "sinnlos",
+    "translate_ger": "sinnlos",
+    "translate_rus": "бессмысленно",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "sinnvoll",
+    "translate_ger": "sinnvoll",
+    "translate_rus": "разумно",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "sortieren",
+    "translate_ger": "sortieren",
+    "translate_rus": "сортировать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "stinken",
+    "translate_ger": "stinken",
+    "translate_rus": "вонять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "streiten",
+    "translate_ger": "streiten",
+    "translate_rus": "сориться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "total",
+    "translate_ger": "total",
+    "translate_rus": "совершенно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "treu",
+    "translate_ger": "treu",
+    "translate_rus": "верный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "überlegen",
+    "translate_ger": "überlegen",
+    "translate_rus": "думать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "üblich",
+    "translate_ger": "üblich",
+    "translate_rus": "обычный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "unglaublich",
+    "translate_ger": "unglaublich",
+    "translate_rus": "невероятный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Unrecht",
+    "translate_ger": "Unrecht",
+    "translate_rus": "несправедливость",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Urteil",
+    "translate_ger": "Urteil",
+    "translate_rus": "приговор",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "vergleichbar",
+    "translate_ger": "vergleichbar",
+    "translate_rus": "сопоставимый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "verpflichten",
+    "translate_ger": "verpflichten",
+    "translate_rus": "обязывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Verständnis",
+    "translate_ger": "Verständnis",
+    "translate_rus": "понимание",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Verstoß",
+    "translate_ger": "Verstoß",
+    "translate_rus": "нарушение",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "verstoßen",
+    "translate_ger": "verstoßen",
+    "translate_rus": "нарушать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "völlig",
+    "translate_ger": "völlig",
+    "translate_rus": "полностью",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "vorher",
+    "translate_ger": "vorher",
+    "translate_rus": "до того",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "wegräumen",
+    "translate_ger": "wegräumen",
+    "translate_rus": "убирать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Widerspruch",
+    "translate_ger": "Widerspruch",
+    "translate_rus": "возражение",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "wütend",
+    "translate_ger": "wütend",
+    "translate_rus": "взбешенный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Zeitraum",
+    "translate_ger": "Zeitraum",
+    "translate_rus": "период времени",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "ziemlich",
+    "translate_ger": "ziemlich",
+    "translate_rus": "достаточно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Zimmerlautstärke",
+    "translate_ger": "Zimmerlautstärke",
+    "translate_rus": "умеренная громкость",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "zugeben",
+    "translate_ger": "zugeben",
+    "translate_rus": "признавать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "zurücklassen",
+    "translate_ger": "zurücklassen",
+    "translate_rus": "оставить позади",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Zusammenleben",
+    "translate_ger": "Zusammenleben",
+    "translate_rus": "совместная жизнь",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "zustimmen",
+    "translate_ger": "zustimmen",
+    "translate_rus": "согласиться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Zutritt",
+    "translate_ger": "Zutritt",
+    "translate_rus": "допуск",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Abgas",
+    "translate_ger": "Abgas",
+    "translate_rus": "выхлопные газы",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Abwasser",
+    "translate_ger": "Abwasser",
+    "translate_rus": "сточная вода",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Altöl",
+    "translate_ger": "Altöl",
+    "translate_rus": "отработанное масло",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Altpapier",
+    "translate_ger": "Altpapier",
+    "translate_rus": "макулатура",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Aluminium",
+    "translate_ger": "Aluminium",
+    "translate_rus": "алюминий",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "andauernd",
+    "translate_ger": "andauernd",
+    "translate_rus": "постоянно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "работа"
+  },
+  {
+    "word": "ankündigen",
+    "translate_ger": "ankündigen",
+    "translate_rus": "объявлять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "anstatt",
+    "translate_ger": "anstatt",
+    "translate_rus": "вместо",
+    "gender": null,
+    "type": "Präposition",
+    "topic": "Школа"
+  },
+  {
+    "word": "Begleitperson",
+    "translate_ger": "Begleitperson",
+    "translate_rus": "сопровождающее лицо",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "belasten",
+    "translate_ger": "belasten",
+    "translate_rus": "отягощать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Belastung",
+    "translate_ger": "Belastung",
+    "translate_rus": "отягощение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "beobachten",
+    "translate_ger": "beobachten",
+    "translate_rus": "наблюдать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Beutel",
+    "translate_ger": "Beutel",
+    "translate_rus": "мешок",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "biologisch",
+    "translate_ger": "biologisch",
+    "translate_rus": "биологический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Chemikalie",
+    "translate_ger": "Chemikalie",
+    "translate_rus": "химикат",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Deckel",
+    "translate_ger": "Deckel",
+    "translate_rus": "крышка",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "doof",
+    "translate_ger": "doof",
+    "translate_rus": "глупый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Eierkarton",
+    "translate_ger": "Eierkarton",
+    "translate_rus": "коробка для яиц",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Eierschale",
+    "translate_ger": "Eierschale",
+    "translate_rus": "яичная скорлупа",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "einfallen",
+    "translate_ger": "einfallen",
+    "translate_rus": "вторгаться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Elektroauto",
+    "translate_ger": "Elektroauto",
+    "translate_rus": "электромобиль",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "транспорт"
+  },
+  {
+    "word": "Energiesparhaus",
+    "translate_ger": "Energiesparhaus",
+    "translate_rus": "энергосберегающий дом",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Energiesparlampe",
+    "translate_ger": "Energiesparlampe",
+    "translate_rus": "энергосберегающая лампа",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Erdbeben",
+    "translate_ger": "Erdbeben",
+    "translate_rus": "землетрясение",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Erde",
+    "translate_ger": "Erde",
+    "translate_rus": "земля",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Erderwärmung",
+    "translate_ger": "Erderwärmung",
+    "translate_rus": "глобальное потепление",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Erlaubnis",
+    "translate_ger": "Erlaubnis",
+    "translate_rus": "разрешение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Gegenstand",
+    "translate_ger": "Gegenstand",
+    "translate_rus": "предмет",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Gegenvorschlag",
+    "translate_ger": "Gegenvorschlag",
+    "translate_rus": "контрпредложение",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "giftig",
+    "translate_ger": "giftig",
+    "translate_rus": "ядовитый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Haushalt",
+    "translate_ger": "Haushalt",
+    "translate_rus": "домашнее хозяйство",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Hochwasser",
+    "translate_ger": "Hochwasser",
+    "translate_rus": "половодье",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Kaffeefilter",
+    "translate_ger": "Kaffeefilter",
+    "translate_rus": "фильтр для кофе",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Klima",
+    "translate_ger": "Klima",
+    "translate_rus": "климат",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Klimawandel",
+    "translate_ger": "Klimawandel",
+    "translate_rus": "изменение климата",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Konservendose",
+    "translate_ger": "Konservendose",
+    "translate_rus": "консервная банка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Kunststoff",
+    "translate_ger": "Kunststoff",
+    "translate_rus": "пластмасса",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Luft",
+    "translate_ger": "Luft",
+    "translate_rus": "воздух",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Matratze",
+    "translate_ger": "Matratze",
+    "translate_rus": "матрац",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Metall",
+    "translate_ger": "Metall",
+    "translate_rus": "металл",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Milchkarton",
+    "translate_ger": "Milchkarton",
+    "translate_rus": "упаковка молока",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Mülltonne",
+    "translate_ger": "Mülltonne",
+    "translate_rus": "мусорный бак",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Mülltrennung",
+    "translate_ger": "Mülltrennung",
+    "translate_rus": "сортировка мусора",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Naturkatastrophe",
+    "translate_ger": "Naturkatastrophe",
+    "translate_rus": "природная катастрофа",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Naturprodukt",
+    "translate_ger": "Naturprodukt",
+    "translate_rus": "натуральный продукт",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Obstschale",
+    "translate_ger": "Obstschale",
+    "translate_rus": "фруктовая кожица",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Papiermüll",
+    "translate_ger": "Papiermüll",
+    "translate_rus": "бумажный мусор",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Pappe",
+    "translate_ger": "Pappe",
+    "translate_rus": "картон",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Picknick",
+    "translate_ger": "Picknick",
+    "translate_rus": "пикник",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Planet",
+    "translate_ger": "Planet",
+    "translate_rus": "планета",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Plastik",
+    "translate_ger": "Plastik",
+    "translate_rus": "пластик",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "recyceln",
+    "translate_ger": "recyceln",
+    "translate_rus": "перерабатывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Sack",
+    "translate_ger": "Sack",
+    "translate_rus": "мешок",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sammelstelle",
+    "translate_ger": "Sammelstelle",
+    "translate_rus": "пункт сбора",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "schädigen",
+    "translate_ger": "schädigen",
+    "translate_rus": "вредить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "schädlich",
+    "translate_ger": "schädlich",
+    "translate_rus": "вредный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Schadstoff",
+    "translate_ger": "Schadstoff",
+    "translate_rus": "вредное вещество",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "schützen",
+    "translate_ger": "schützen",
+    "translate_rus": "защищать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Solarenergie",
+    "translate_ger": "Solarenergie",
+    "translate_rus": "солнечная энергия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sondermüll",
+    "translate_ger": "Sondermüll",
+    "translate_rus": "ядовитые отходы",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sonnenschein",
+    "translate_ger": "Sonnenschein",
+    "translate_rus": "солнечный свет",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Sorge",
+    "translate_ger": "Sorge",
+    "translate_rus": "забота",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "sparsam",
+    "translate_ger": "sparsam",
+    "translate_rus": "экономный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Sperrmüll",
+    "translate_ger": "Sperrmüll",
+    "translate_rus": "крупногабаритный мусор",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "stattfinden",
+    "translate_ger": "stattfinden",
+    "translate_rus": "состояться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Tierschutz",
+    "translate_ger": "Tierschutz",
+    "translate_rus": "защита животных",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Trinkwasser",
+    "translate_ger": "Trinkwasser",
+    "translate_rus": "питьевая вода",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "trüb",
+    "translate_ger": "trüb",
+    "translate_rus": "мутный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Tsunami",
+    "translate_ger": "Tsunami",
+    "translate_rus": "цунами",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Turm",
+    "translate_ger": "Turm",
+    "translate_rus": "башня",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "umdrehen",
+    "translate_ger": "umdrehen",
+    "translate_rus": "поворачиваться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "umgehen",
+    "translate_ger": "umgehen",
+    "translate_rus": "обойти",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "umweltfreundlich",
+    "translate_ger": "umweltfreundlich",
+    "translate_rus": "безвредный для окружающей среды",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Umweltschutz",
+    "translate_ger": "Umweltschutz",
+    "translate_rus": "защита окружающей среды",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Umweltverschmutzung",
+    "translate_ger": "Umweltverschmutzung",
+    "translate_rus": "загрязнение окружающей среды",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Unwetter",
+    "translate_ger": "Unwetter",
+    "translate_rus": "буря",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "verändern",
+    "translate_ger": "verändern",
+    "translate_rus": "изменять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verlaufen",
+    "translate_ger": "verlaufen",
+    "translate_rus": "протекать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verschmutzen",
+    "translate_ger": "verschmutzen",
+    "translate_rus": "загрязнять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "verschwenden",
+    "translate_ger": "verschwenden",
+    "translate_rus": "растрачивать впустую",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Verschwendung",
+    "translate_ger": "Verschwendung",
+    "translate_rus": "растрата",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "versprechen",
+    "translate_ger": "versprechen",
+    "translate_rus": "обещать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verwerten",
+    "translate_ger": "verwerten",
+    "translate_rus": "утилизировать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "voraussichtlich",
+    "translate_ger": "voraussichtlich",
+    "translate_rus": "вероятно",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "vorhersagen",
+    "translate_ger": "vorhersagen",
+    "translate_rus": "предсказывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "wahrscheinlich",
+    "translate_ger": "wahrscheinlich",
+    "translate_rus": "возможно",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "wegschmeißen",
+    "translate_ger": "wegschmeißen",
+    "translate_rus": "выкидывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "wegwerfen",
+    "translate_ger": "wegwerfen",
+    "translate_rus": "выбрасывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Wertstoff",
+    "translate_ger": "Wertstoff",
+    "translate_rus": "вторсырье",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Wind",
+    "translate_ger": "Wind",
+    "translate_rus": "ветер",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Windel",
+    "translate_ger": "Windel",
+    "translate_rus": "подгузник",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Wirbelsturm",
+    "translate_ger": "Wirbelsturm",
+    "translate_rus": "ураган",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Wolke",
+    "translate_ger": "Wolke",
+    "translate_rus": "облако",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "zerstören",
+    "translate_ger": "zerstören",
+    "translate_rus": "разрушать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Zerstörung",
+    "translate_ger": "Zerstörung",
+    "translate_rus": "разрушение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Zigarettenkippe",
+    "translate_ger": "Zigarettenkippe",
+    "translate_rus": "окурок",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "zurückfahren",
+    "translate_ger": "zurückfahren",
+    "translate_rus": "возвращаться обратно",
+    "gender": null,
+    "type": "Verb",
+    "topic": "транспорт"
+  },
+  {
+    "word": "AGB",
+    "translate_ger": "AGB",
+    "translate_rus": "общие условия сделки",
+    "gender": null,
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "anfassen",
+    "translate_ger": "anfassen",
+    "translate_rus": "дотрагиваться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Anprobe",
+    "translate_ger": "Anprobe",
+    "translate_rus": "примерка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "anprobieren",
+    "translate_ger": "anprobieren",
+    "translate_rus": "примерять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Art",
+    "translate_ger": "Art",
+    "translate_rus": "вид",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Artikelnummer",
+    "translate_ger": "Artikelnummer",
+    "translate_rus": "номер артикула",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Atmung",
+    "translate_ger": "Atmung",
+    "translate_rus": "дыхание",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "atmungsaktiv",
+    "translate_ger": "atmungsaktiv",
+    "translate_rus": "дышащий",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "aufmerksam",
+    "translate_ger": "aufmerksam",
+    "translate_rus": "внимательный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Auftrag",
+    "translate_ger": "Auftrag",
+    "translate_rus": "поручение",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Auftragsnummer",
+    "translate_ger": "Auftragsnummer",
+    "translate_rus": "номер поручения",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "ausliefern",
+    "translate_ger": "ausliefern",
+    "translate_rus": "поставлять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Auswahl",
+    "translate_ger": "Auswahl",
+    "translate_rus": "выбор",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Bankeinzug",
+    "translate_ger": "Bankeinzug",
+    "translate_rus": "списание с банковского счета",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "bereits",
+    "translate_ger": "bereits",
+    "translate_rus": "уже",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "beschädigt",
+    "translate_ger": "beschädigt",
+    "translate_rus": "поврежденный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Bestellhotline",
+    "translate_ger": "Bestellhotline",
+    "translate_rus": "горячая линия для приема заказов",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Betrag",
+    "translate_ger": "Betrag",
+    "translate_rus": "сумма",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Bezahlvorgang",
+    "translate_ger": "Bezahlvorgang",
+    "translate_rus": "процесс оплаты",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Callcenter",
+    "translate_ger": "Callcenter",
+    "translate_rus": "центр телефонного обслуживания",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Datenschutz",
+    "translate_ger": "Datenschutz",
+    "translate_rus": "защита личных данных",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "dicht",
+    "translate_ger": "dicht",
+    "translate_rus": "густой",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "durchlässig",
+    "translate_ger": "durchlässig",
+    "translate_rus": "проницаемый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "ebenso",
+    "translate_ger": "ebenso",
+    "translate_rus": "также",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "eher",
+    "translate_ger": "eher",
+    "translate_rus": "скорее",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Eigentum",
+    "translate_ger": "Eigentum",
+    "translate_rus": "собственность",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Ergänzung",
+    "translate_ger": "Ergänzung",
+    "translate_rus": "дополнение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "erhältlich",
+    "translate_ger": "erhältlich",
+    "translate_rus": "имеющийся в продаже",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "eventuell",
+    "translate_ger": "eventuell",
+    "translate_rus": "возможно",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "falls",
+    "translate_ger": "falls",
+    "translate_rus": "если",
+    "gender": null,
+    "type": "Konjunktion",
+    "topic": "Школа"
+  },
+  {
+    "word": "Gutschein",
+    "translate_ger": "Gutschein",
+    "translate_rus": "ваучер",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "herstellen",
+    "translate_ger": "herstellen",
+    "translate_rus": "производить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Herstellung",
+    "translate_ger": "Herstellung",
+    "translate_rus": "производство",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Impressum",
+    "translate_ger": "Impressum",
+    "translate_rus": "выходные данные",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "innerhalb",
+    "translate_ger": "innerhalb",
+    "translate_rus": "внутри",
+    "gender": null,
+    "type": "Präposition",
+    "topic": "Школа"
+  },
+  {
+    "word": "irgendwie",
+    "translate_ger": "irgendwie",
+    "translate_rus": "как-нибудь",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Kauf",
+    "translate_ger": "Kauf",
+    "translate_rus": "покупка",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Kaufbestätigung",
+    "translate_ger": "Kaufbestätigung",
+    "translate_rus": "подтверждение о покупке",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Kaufvertrag",
+    "translate_ger": "Kaufvertrag",
+    "translate_rus": "договор купли",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Kosmetik",
+    "translate_ger": "Kosmetik",
+    "translate_rus": "косметика",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Kundenbefragung",
+    "translate_ger": "Kundenbefragung",
+    "translate_rus": "опрос клиентов",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "kundenfreundlich",
+    "translate_ger": "kundenfreundlich",
+    "translate_rus": "ориентированный на клиента",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Lager",
+    "translate_ger": "Lager",
+    "translate_rus": "склад",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "lieferbar",
+    "translate_ger": "lieferbar",
+    "translate_rus": "имеющийся на складе",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Lieferbedingung",
+    "translate_ger": "Lieferbedingung",
+    "translate_rus": "условия поставки",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Lieferung",
+    "translate_ger": "Lieferung",
+    "translate_rus": "поставка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "luftdurchlässig",
+    "translate_ger": "luftdurchlässig",
+    "translate_rus": "воздухопроницаемый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Mehrkosten",
+    "translate_ger": "Mehrkosten",
+    "translate_rus": "дополнительные расходы",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Nachnahme",
+    "translate_ger": "Nachnahme",
+    "translate_rus": "наложенный платеж",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Nachteil",
+    "translate_ger": "Nachteil",
+    "translate_rus": "недостаток",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Onlineeinkauf",
+    "translate_ger": "Onlineeinkauf",
+    "translate_rus": "покупка в интернете",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Onlineshop",
+    "translate_ger": "Onlineshop",
+    "translate_rus": "интернет-магазин",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Onlineshopping",
+    "translate_ger": "Onlineshopping",
+    "translate_rus": "совершение покупок в интернете",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Paket",
+    "translate_ger": "Paket",
+    "translate_rus": "посылка",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Paketbote",
+    "translate_ger": "Paketbote",
+    "translate_rus": "почтальон",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Paketdienst",
+    "translate_ger": "Paketdienst",
+    "translate_rus": "служба доставки",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Porto",
+    "translate_ger": "Porto",
+    "translate_rus": "почтовые расходы",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "portofrei",
+    "translate_ger": "portofrei",
+    "translate_rus": "бесплатная пересылка",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Portokosten",
+    "translate_ger": "Portokosten",
+    "translate_rus": "почтовые расходы",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "produzieren",
+    "translate_ger": "produzieren",
+    "translate_rus": "производить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Qualität",
+    "translate_ger": "Qualität",
+    "translate_rus": "качество",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Reklamation",
+    "translate_ger": "Reklamation",
+    "translate_rus": "рекламация",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Retoure",
+    "translate_ger": "Retoure",
+    "translate_rus": "возврат",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Retourenschein",
+    "translate_ger": "Retourenschein",
+    "translate_rus": "бланк возврата",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Rücksendung",
+    "translate_ger": "Rücksendung",
+    "translate_rus": "обратная доставка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Shopping",
+    "translate_ger": "Shopping",
+    "translate_rus": "совершение покупок",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "unverbindlich",
+    "translate_ger": "unverbindlich",
+    "translate_rus": "не имеющий обязательной силы",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "verpacken",
+    "translate_ger": "verpacken",
+    "translate_rus": "упаковывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Versand",
+    "translate_ger": "Versand",
+    "translate_rus": "отправка",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Versandkosten",
+    "translate_ger": "Versandkosten",
+    "translate_rus": "стоимость отправки",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "versandkostenfrei",
+    "translate_ger": "versandkostenfrei",
+    "translate_rus": "бесплатная отправка",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Versandkostenpauschale",
+    "translate_ger": "Versandkostenpauschale",
+    "translate_rus": "паушальная стоимость пересылки",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "versenden",
+    "translate_ger": "versenden",
+    "translate_rus": "посылать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Ware",
+    "translate_ger": "Ware",
+    "translate_rus": "товар",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Warenkorb",
+    "translate_ger": "Warenkorb",
+    "translate_rus": "потребительская корзина",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "wasserdicht",
+    "translate_ger": "wasserdicht",
+    "translate_rus": "водонепроницаемый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Werktag",
+    "translate_ger": "Werktag",
+    "translate_rus": "рабочий день",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "wetterfest",
+    "translate_ger": "wetterfest",
+    "translate_rus": "погодостoйкий",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "widerrufen",
+    "translate_ger": "widerrufen",
+    "translate_rus": "отозвать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Widerrufsrecht",
+    "translate_ger": "Widerrufsrecht",
+    "translate_rus": "право отзыва",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "Zahlung",
+    "translate_ger": "Zahlung",
+    "translate_rus": "оплата",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "магазин"
+  },
+  {
+    "word": "zurückschicken",
+    "translate_ger": "zurückschicken",
+    "translate_rus": "отправлять обратно",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "zurücksenden",
+    "translate_ger": "zurücksenden",
+    "translate_rus": "отправлять обратно",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "zurücktreten",
+    "translate_ger": "zurücktreten",
+    "translate_rus": "отказаться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "zustellen",
+    "translate_ger": "zustellen",
+    "translate_rus": "доставить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "магазин"
+  },
+  {
+    "word": "Alter",
+    "translate_ger": "Alter",
+    "translate_rus": "возраст",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "anschauen",
+    "translate_ger": "anschauen",
+    "translate_rus": "посмотреть",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "Anstoß",
+    "translate_ger": "Anstoß",
+    "translate_rus": "удар",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "anstrengend",
+    "translate_ger": "anstrengend",
+    "translate_rus": "утомительный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Autorennen",
+    "translate_ger": "Autorennen",
+    "translate_rus": "автогонки",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "befragen",
+    "translate_ger": "befragen",
+    "translate_rus": "опрашивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "begeistern",
+    "translate_ger": "begeistern",
+    "translate_rus": "восхищать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "beliebt",
+    "translate_ger": "beliebt",
+    "translate_rus": "излюбленный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Biergarten",
+    "translate_ger": "Biergarten",
+    "translate_rus": "пивной сад",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Boxen",
+    "translate_ger": "Boxen",
+    "translate_rus": "бокс",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Chips",
+    "translate_ger": "Chips",
+    "translate_rus": "чипсы",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "demnächst",
+    "translate_ger": "demnächst",
+    "translate_rus": "в скором времени",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "работа"
+  },
+  {
+    "word": "Detektivgeschichte",
+    "translate_ger": "Detektivgeschichte",
+    "translate_rus": "детективная история",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Diagramm",
+    "translate_ger": "Diagramm",
+    "translate_rus": "диаграмма",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Diskussion",
+    "translate_ger": "Diskussion",
+    "translate_rus": "дискуссия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Dokumentation",
+    "translate_ger": "Dokumentation",
+    "translate_rus": "документация",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "doppelt",
+    "translate_ger": "doppelt",
+    "translate_rus": "двукратный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "dramatisch",
+    "translate_ger": "dramatisch",
+    "translate_rus": "драматический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Durchschnitt",
+    "translate_ger": "Durchschnitt",
+    "translate_rus": "средний уровень",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "DVD",
+    "translate_ger": "DVD",
+    "translate_rus": "DVD-диск",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "ehrlich",
+    "translate_ger": "ehrlich",
+    "translate_rus": "честный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "einschlafen",
+    "translate_ger": "einschlafen",
+    "translate_rus": "засыпать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "einsetzen",
+    "translate_ger": "einsetzen",
+    "translate_rus": "вставлять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Eishockey",
+    "translate_ger": "Eishockey",
+    "translate_rus": "хоккей",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Eiskunstlauf",
+    "translate_ger": "Eiskunstlauf",
+    "translate_rus": "фигурное катание",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Ereignis",
+    "translate_ger": "Ereignis",
+    "translate_rus": "событие",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "erfolgreich",
+    "translate_ger": "erfolgreich",
+    "translate_rus": "успешный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Ergebnis",
+    "translate_ger": "Ergebnis",
+    "translate_rus": "результат",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Fan",
+    "translate_ger": "Fan",
+    "translate_rus": "фанат",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Fußballclub",
+    "translate_ger": "Fußballclub",
+    "translate_rus": "футбольный клуб",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Gewohnheit",
+    "translate_ger": "Gewohnheit",
+    "translate_rus": "привычка",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Golf",
+    "translate_ger": "Golf",
+    "translate_rus": "гольф",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Handball",
+    "translate_ger": "Handball",
+    "translate_rus": "гандбол",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Herz",
+    "translate_ger": "Herz",
+    "translate_rus": "сердце",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Horrorfilm",
+    "translate_ger": "Horrorfilm",
+    "translate_rus": "фильм ужасов",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Komödie",
+    "translate_ger": "Komödie",
+    "translate_rus": "комедия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Krimi",
+    "translate_ger": "Krimi",
+    "translate_rus": "детектив",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "kuscheln",
+    "translate_ger": "kuscheln",
+    "translate_rus": "уютно устраиваться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Langeweile",
+    "translate_ger": "Langeweile",
+    "translate_rus": "скука",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Leichtathletik",
+    "translate_ger": "Leichtathletik",
+    "translate_rus": "легкая атлетика",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Lieblingsbeschäftigung",
+    "translate_ger": "Lieblingsbeschäftigung",
+    "translate_rus": "любимое занятие",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Magazin",
+    "translate_ger": "Magazin",
+    "translate_rus": "журнал",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Mannschaft",
+    "translate_ger": "Mannschaft",
+    "translate_rus": "команда",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Mehrheit",
+    "translate_ger": "Mehrheit",
+    "translate_rus": "большинство",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Minderheit",
+    "translate_ger": "Minderheit",
+    "translate_rus": "меньшинство",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "mitreden",
+    "translate_ger": "mitreden",
+    "translate_rus": "участвовать в разговоре",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Mittelfeld",
+    "translate_ger": "Mittelfeld",
+    "translate_rus": "центральная зона",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Moderation",
+    "translate_ger": "Moderation",
+    "translate_rus": "выполнение роли ведущего",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Mord",
+    "translate_ger": "Mord",
+    "translate_rus": "убийство",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "motiviert",
+    "translate_ger": "motiviert",
+    "translate_rus": "мотивированный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "naschen",
+    "translate_ger": "naschen",
+    "translate_rus": "лакомиться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "еда"
+  },
+  {
+    "word": "Niederlage",
+    "translate_ger": "Niederlage",
+    "translate_rus": "поражение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "objektiv",
+    "translate_ger": "objektiv",
+    "translate_rus": "объективный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Quizshow",
+    "translate_ger": "Quizshow",
+    "translate_rus": "телевикторина",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Radrennen",
+    "translate_ger": "Radrennen",
+    "translate_rus": "велосипедные гонки",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Rangliste",
+    "translate_ger": "Rangliste",
+    "translate_rus": "список лучших спортсменов",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Rätsel",
+    "translate_ger": "Rätsel",
+    "translate_rus": "загадка",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Reportage",
+    "translate_ger": "Reportage",
+    "translate_rus": "репортаж",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "retten",
+    "translate_ger": "retten",
+    "translate_rus": "спасать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "romantisch",
+    "translate_ger": "romantisch",
+    "translate_rus": "романтический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Runde",
+    "translate_ger": "Runde",
+    "translate_rus": "раунд",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "schalten",
+    "translate_ger": "schalten",
+    "translate_rus": "включать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "дом"
+  },
+  {
+    "word": "Schiedsrichter",
+    "translate_ger": "Schiedsrichter",
+    "translate_rus": "арбитр",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "schießen",
+    "translate_ger": "schießen",
+    "translate_rus": "забивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "Seifenoper",
+    "translate_ger": "Seifenoper",
+    "translate_rus": "мыльная опера",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Sendung",
+    "translate_ger": "Sendung",
+    "translate_rus": "передача",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Serie",
+    "translate_ger": "Serie",
+    "translate_rus": "серия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "siegen",
+    "translate_ger": "siegen",
+    "translate_rus": "побеждать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "Skisport",
+    "translate_ger": "Skisport",
+    "translate_rus": "лыжный спорт",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Soap",
+    "translate_ger": "Soap",
+    "translate_rus": "телесериал",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "spannend",
+    "translate_ger": "spannend",
+    "translate_rus": "увлекательный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Spielfilm",
+    "translate_ger": "Spielfilm",
+    "translate_rus": "художественный фильм",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Stadion",
+    "translate_ger": "Stadion",
+    "translate_rus": "стадион",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Statistik",
+    "translate_ger": "Statistik",
+    "translate_rus": "статистика",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Tagesablauf",
+    "translate_ger": "Tagesablauf",
+    "translate_rus": "распорядок дня",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Talkshow",
+    "translate_ger": "Talkshow",
+    "translate_rus": "ток-шоу",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Tor",
+    "translate_ger": "Tor",
+    "translate_rus": "гол",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Übertragung",
+    "translate_ger": "Übertragung",
+    "translate_rus": "передача",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "unentschieden",
+    "translate_ger": "unentschieden",
+    "translate_rus": "ничья",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "ungesund",
+    "translate_ger": "ungesund",
+    "translate_rus": "нездоровый",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Unterhaltung",
+    "translate_ger": "Unterhaltung",
+    "translate_rus": "развлечение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Weltmeisterschaft",
+    "translate_ger": "Weltmeisterschaft",
+    "translate_rus": "чемпионат мира",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "weshalb",
+    "translate_ger": "weshalb",
+    "translate_rus": "отчего",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "zappen",
+    "translate_ger": "zappen",
+    "translate_rus": "переключать каналы",
+    "gender": null,
+    "type": "Verb",
+    "topic": "спорт"
+  },
+  {
+    "word": "Zeichentrickfilm",
+    "translate_ger": "Zeichentrickfilm",
+    "translate_rus": "мультфильм",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Zeitverschwendung",
+    "translate_ger": "Zeitverschwendung",
+    "translate_rus": "трата времени",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Amtssprache",
+    "translate_ger": "Amtssprache",
+    "translate_rus": "официальный язык",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "anfangs",
+    "translate_ger": "anfangs",
+    "translate_rus": "в начале",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "anheben",
+    "translate_ger": "anheben",
+    "translate_rus": "поднимать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Arbeitskraft",
+    "translate_ger": "Arbeitskraft",
+    "translate_rus": "рабочая сила",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Arbeitslosigkeit",
+    "translate_ger": "Arbeitslosigkeit",
+    "translate_rus": "безработица",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Asyl",
+    "translate_ger": "Asyl",
+    "translate_rus": "убежище",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "aufschreiben",
+    "translate_ger": "aufschreiben",
+    "translate_rus": "записывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "aufteilen",
+    "translate_ger": "aufteilen",
+    "translate_rus": "разделять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Auswanderer",
+    "translate_ger": "Auswanderer",
+    "translate_rus": "эмигрант",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Auswanderung",
+    "translate_ger": "Auswanderung",
+    "translate_rus": "эмиграция",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Besatzungszone",
+    "translate_ger": "Besatzungszone",
+    "translate_rus": "оккупационная зона",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "besiegen",
+    "translate_ger": "besiegen",
+    "translate_rus": "побеждать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Bundesrepublik",
+    "translate_ger": "Bundesrepublik",
+    "translate_rus": "Федеральная республика Германия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Bürgerkrieg",
+    "translate_ger": "Bürgerkrieg",
+    "translate_rus": "гражданская война",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Demokratie",
+    "translate_ger": "Demokratie",
+    "translate_rus": "демократия",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "demokratisch",
+    "translate_ger": "demokratisch",
+    "translate_rus": "демократический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Demonstration",
+    "translate_ger": "Demonstration",
+    "translate_rus": "демонстрация",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Deutsche",
+    "translate_ger": "Deutsche",
+    "translate_rus": "Демократическая Республика",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "ehemalig",
+    "translate_ger": "ehemalig",
+    "translate_rus": "бывший",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "einführen",
+    "translate_ger": "einführen",
+    "translate_rus": "вводить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "einsperren",
+    "translate_ger": "einsperren",
+    "translate_rus": "запирать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Einwanderung",
+    "translate_ger": "Einwanderung",
+    "translate_rus": "иммиграция",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "emotional",
+    "translate_ger": "emotional",
+    "translate_rus": "эмоциональный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "дом"
+  },
+  {
+    "word": "entwickeln",
+    "translate_ger": "entwickeln",
+    "translate_rus": "развиваться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "erinnern",
+    "translate_ger": "erinnern",
+    "translate_rus": "вспоминать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Erinnerung",
+    "translate_ger": "Erinnerung",
+    "translate_rus": "воспоминание",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "ernähren",
+    "translate_ger": "ernähren",
+    "translate_rus": "кормить",
+    "gender": null,
+    "type": "Verb",
+    "topic": "еда"
+  },
+  {
+    "word": "Europäische",
+    "translate_ger": "Europäische",
+    "translate_rus": "Европейский союз",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Euroeinführung",
+    "translate_ger": "Euroeinführung",
+    "translate_rus": "введение евро",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Flüchtling",
+    "translate_ger": "Flüchtling",
+    "translate_rus": "беженец",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "fördern",
+    "translate_ger": "fördern",
+    "translate_rus": "поощрять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Fremdsprache",
+    "translate_ger": "Fremdsprache",
+    "translate_rus": "иностранный язык",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "friedlich",
+    "translate_ger": "friedlich",
+    "translate_rus": "мирный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Gefühl",
+    "translate_ger": "Gefühl",
+    "translate_rus": "чувство",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Gehalt",
+    "translate_ger": "Gehalt",
+    "translate_rus": "заработная плата",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Gewürz",
+    "translate_ger": "Gewürz",
+    "translate_rus": "приправа",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "еда"
+  },
+  {
+    "word": "Grenze",
+    "translate_ger": "Grenze",
+    "translate_rus": "граница",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "gründen",
+    "translate_ger": "gründen",
+    "translate_rus": "основывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "hart",
+    "translate_ger": "hart",
+    "translate_rus": "жесткий",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Hauptstadt",
+    "translate_ger": "Hauptstadt",
+    "translate_rus": "столица",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Heimat",
+    "translate_ger": "Heimat",
+    "translate_rus": "родина",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Industrie",
+    "translate_ger": "Industrie",
+    "translate_rus": "промышленность",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "irgendwann",
+    "translate_ger": "irgendwann",
+    "translate_rus": "когда-нибудь",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "jahrelang",
+    "translate_ger": "jahrelang",
+    "translate_rus": "в течение многих лет",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Jahrhundert",
+    "translate_ger": "Jahrhundert",
+    "translate_rus": "век",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Jahrzehnt",
+    "translate_ger": "Jahrzehnt",
+    "translate_rus": "десятилетие",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "kaum",
+    "translate_ger": "kaum",
+    "translate_rus": "едва",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Kindheit",
+    "translate_ger": "Kindheit",
+    "translate_rus": "детство",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Krieg",
+    "translate_ger": "Krieg",
+    "translate_rus": "война",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Kriegsende",
+    "translate_ger": "Kriegsende",
+    "translate_rus": "конец войны",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Krippe",
+    "translate_ger": "Krippe",
+    "translate_rus": "ясли",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Mauer",
+    "translate_ger": "Mauer",
+    "translate_rus": "стена",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Mauerbau",
+    "translate_ger": "Mauerbau",
+    "translate_rus": "строительство стены",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Mauerfall",
+    "translate_ger": "Mauerfall",
+    "translate_rus": "падение стены",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Medizin",
+    "translate_ger": "Medizin",
+    "translate_rus": "медицина",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "merken",
+    "translate_ger": "merken",
+    "translate_rus": "запоминать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Migration",
+    "translate_ger": "Migration",
+    "translate_rus": "миграция",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "miteinander",
+    "translate_ger": "miteinander",
+    "translate_rus": "друг с другом",
+    "gender": null,
+    "type": "Adverb",
+    "topic": "дом"
+  },
+  {
+    "word": "miterleben",
+    "translate_ger": "miterleben",
+    "translate_rus": "переживать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "musikalisch",
+    "translate_ger": "musikalisch",
+    "translate_rus": "музыкальный",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "спорт"
+  },
+  {
+    "word": "Muttersprache",
+    "translate_ger": "Muttersprache",
+    "translate_rus": "родной язык",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Nachkriegszeit",
+    "translate_ger": "Nachkriegszeit",
+    "translate_rus": "послевоенное время",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Nationalsozialismus",
+    "translate_ger": "Nationalsozialismus",
+    "translate_rus": "национал-социализм",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "NATO",
+    "translate_ger": "NATO",
+    "translate_rus": "НАТО",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Notunterkunft",
+    "translate_ger": "Notunterkunft",
+    "translate_rus": "аварийное убежище",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "дом"
+  },
+  {
+    "word": "Öffnung",
+    "translate_ger": "Öffnung",
+    "translate_rus": "открытие",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Phase",
+    "translate_ger": "Phase",
+    "translate_rus": "фаза",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "politisch",
+    "translate_ger": "politisch",
+    "translate_rus": "политический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Protest",
+    "translate_ger": "Protest",
+    "translate_rus": "протест",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Regierung",
+    "translate_ger": "Regierung",
+    "translate_rus": "правительство",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "работа"
+  },
+  {
+    "word": "Republik",
+    "translate_ger": "Republik",
+    "translate_rus": "республика",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Staat",
+    "translate_ger": "Staat",
+    "translate_rus": "государство",
+    "gender": "der",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Staatsgründung",
+    "translate_ger": "Staatsgründung",
+    "translate_rus": "основание государства",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Stipendium",
+    "translate_ger": "Stipendium",
+    "translate_rus": "стипендия",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "tatsächlich",
+    "translate_ger": "tatsächlich",
+    "translate_rus": "фактический",
+    "gender": null,
+    "type": "Adjektiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "Teilung",
+    "translate_ger": "Teilung",
+    "translate_rus": "разделение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "verdrängen",
+    "translate_ger": "verdrängen",
+    "translate_rus": "вытеснять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "vereinigen",
+    "translate_ger": "vereinigen",
+    "translate_rus": "объединять",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verfolgen",
+    "translate_ger": "verfolgen",
+    "translate_rus": "преследовать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verhaften",
+    "translate_ger": "verhaften",
+    "translate_rus": "арестовывать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verlängern",
+    "translate_ger": "verlängern",
+    "translate_rus": "продлевать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "verlassen",
+    "translate_ger": "verlassen",
+    "translate_rus": "покидать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "vermischen",
+    "translate_ger": "vermischen",
+    "translate_rus": "смешивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "Visum",
+    "translate_ger": "Visum",
+    "translate_rus": "виза",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "путешествия"
+  },
+  {
+    "word": "Weltall",
+    "translate_ger": "Weltall",
+    "translate_rus": "космос",
+    "gender": "das",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "wiedervereinigen",
+    "translate_ger": "wiedervereinigen",
+    "translate_rus": "воссоединяться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "Школа"
+  },
+  {
+    "word": "Wiedervereinigung",
+    "translate_ger": "Wiedervereinigung",
+    "translate_rus": "воссоединение",
+    "gender": "die",
+    "type": "Substantiv",
+    "topic": "Школа"
+  },
+  {
+    "word": "zerschlagen",
+    "translate_ger": "zerschlagen",
+    "translate_rus": "разбивать",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  },
+  {
+    "word": "zurückkehren",
+    "translate_ger": "zurückkehren",
+    "translate_rus": "возвращаться",
+    "gender": null,
+    "type": "Verb",
+    "topic": "работа"
+  }
+]
