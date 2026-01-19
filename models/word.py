@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ContextTypes
 import random
 
-#test2222222
+#test22222223333333
 
 class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
