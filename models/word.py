@@ -3,8 +3,6 @@ from telegram import Update
 from telegram.ext import ContextTypes
 import random
 
-#test22222223333333
-
 class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
         self.user_id = user_id
@@ -367,7 +365,31 @@ class LessonWizard:
 
         await update.message.reply_text("0 сохранен")
 
+    async def get_failed_words(self, user_id: int):
+        with connection.cursor() as cursor:
+            cursor.execute(
+            """
+            SELECT words.word, words.word_id, words.translate_rus, words.translate_ger FROM user_words 
+            JOIN words ON user_words.word_id = words.word_id
+            WHERE user_words.user_id = %s AND user_words.last_status = 0
+            """,
+            (user_id,)
+            )
+            result = cursor.fetchall()
+
+            """
+            if not result:
+                return None
+            
+            words_only = [row[0] for row in result]
+            tranlate_rus_only = [row[2] for row in result]
+            translate_ger_only = [row[3] for row in result]
+
+            return result, words_only, translate_ger_only, tranlate_rus_only
+            """
+        
     async def start_lesson_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+        user_id = update.effective_user.id
         if self.state == "ASK_LESSON_TOPIC":
             with connection.cursor() as cursor: # get the topics from db to show the user
                 cursor.execute(
@@ -393,8 +415,22 @@ class LessonWizard:
                 
                 self.topic_id = result[0]
 
-                #if result == "неправильные слова":
-                    #await get_failed_words(self, user_id, word_id)
+                if chosen_topic == "неправильные слова":
+                    failed = self.get_failed_words(user_id)
+
+                    if not failed:
+                        await update.message.reply_text("у тебя нет неправильных слов")
+                        return
+
+                    self.words = failed
+                    await update.message.reply_text(
+                        f"начинаем урок по неправильным словам"\n
+                        f"сколько слов хотите учить? слов доступно"
+                    )
+                    self.state = "ASK_NUMBER_OF_WORDS"
+                    return
+                
+                        
                 cursor.execute(
                     "SELECT word, translate_rus, word_id FROM words WHERE topic_id = %s",
                     (self.topic_id,)
@@ -464,15 +500,7 @@ class LessonWizard:
             else:
                 self.state = "ASK_LESSON_WORD"
                 await self.ask_next_word(update)
-   
-    """
-    async def get_failed_words(self, word_id: int, topic_id: int):
-        with connection.cursor() as cursor:
-            cursor.execute(
-
-            )
-    """  
-    
+       
     async def ask_next_word(self, update: Update):
         word_pair = self.words[self.current_index]
         
