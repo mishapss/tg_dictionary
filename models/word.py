@@ -2,7 +2,7 @@ from db_connection import connection
 from telegram import Update
 from telegram.ext import ContextTypes
 import random
-from keyboards import direction_keyboard, lesson_menu_keyboard, remove_keyboard, exercise_keyboard
+#from keyboards import direction_keyboard, lesson_menu_keyboard, remove_keyboard, exercise_keyboard
 
 class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект

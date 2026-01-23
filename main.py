@@ -140,10 +140,10 @@ def main():
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("unregister", user_manager.unregister))
-    app.add_handler(CommandHandler("Добавить слово", add_word_command))
-    app.add_handler(CommandHandler("Обновить слово", update_word_command))
-    app.add_handler(CommandHandler("Удалить слово", delete_word_command))
-    app.add_handler(CommandHandler("Начать/создать урок", create_lesson_command))
+    app.add_handler(CommandHandler("add_word", add_word_command))
+    app.add_handler(CommandHandler("update_word", update_word_command))
+    app.add_handler(CommandHandler("delete_word", delete_word_command))
+    app.add_handler(CommandHandler("create_lesson", create_lesson_command))
 
  
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, universal_text_handler))
