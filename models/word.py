@@ -2,6 +2,7 @@ from db_connection import connection
 from telegram import Update
 from telegram.ext import ContextTypes
 import random
+from keyboards import direction_keyboard, lesson_menu_keyboard, remove_keyboard, exercise_keyboard
 
 class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
@@ -369,24 +370,14 @@ class LessonWizard:
         with connection.cursor() as cursor:
             cursor.execute(
             """
-            SELECT words.word, words.word_id, words.translate_rus, words.translate_ger FROM user_words 
+            SELECT words.word, words.translate_rus, words.translate_ger, words.word_id FROM user_words 
             JOIN words ON user_words.word_id = words.word_id
             WHERE user_words.user_id = %s AND user_words.last_status = 0
             """,
             (user_id,)
             )
-            result = cursor.fetchall()
+            return cursor.fetchall()
 
-            """
-            if not result:
-                return None
-            
-            words_only = [row[0] for row in result]
-            tranlate_rus_only = [row[2] for row in result]
-            translate_ger_only = [row[3] for row in result]
-
-            return result, words_only, translate_ger_only, tranlate_rus_only
-            """
         
     async def start_lesson_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_id = update.effective_user.id
@@ -416,7 +407,8 @@ class LessonWizard:
                 self.topic_id = result[0]
 
                 if chosen_topic == "неправильные слова":
-                    failed = self.get_failed_words(user_id)
+                    failed = await self.get_failed_words(user_id)
+                    count_failed_words = len(failed)
 
                     if not failed:
                         await update.message.reply_text("у тебя нет неправильных слов")
@@ -424,15 +416,15 @@ class LessonWizard:
 
                     self.words = failed
                     await update.message.reply_text(
-                        f"начинаем урок по неправильным словам"\n
-                        f"сколько слов хотите учить? слов доступно"
+                        f"начинаем урок по неправильным словам\n"
+                        f"сколько слов хотите учить? слов доступно {count_failed_words}"
                     )
                     self.state = "ASK_NUMBER_OF_WORDS"
                     return
                 
                         
                 cursor.execute(
-                    "SELECT word, translate_rus, word_id FROM words WHERE topic_id = %s",
+                    "SELECT word, translate_rus, translate_ger, word_id FROM words WHERE topic_id = %s",
                     (self.topic_id,)
                 )
                 self.words = cursor.fetchall()
@@ -463,9 +455,9 @@ class LessonWizard:
         elif self.state == "ASK_EXERCISE":
             choice = update.message.text.strip().lower()
             if "немецкого" in choice:
-                self.exercise_direction = "EXERCISE_GER_TO_RUS"
+                self.exercise_direction = "GER_TO_RUS"
             elif "русского" in choice:
-                self.exercise_direction = "EXERCISE_RUS_TO_GER"
+                self.exercise_direction = "RUS_TO_GER"
             else:
                 await update.message.reply_text("Пожалуйста, введите одно из направлений")
                 return
@@ -479,11 +471,11 @@ class LessonWizard:
             word_pair = self.words[self.current_index]
             
             if self.exercise_direction == "GER_TO_RUS":
-                correct = word_pair[1].lower()
-                word_id = word_pair[2]
+                correct = word_pair[1].strip().lower()
+                word_id = word_pair[3]
             else:
-                correct = word_pair[0].lower()
-                word_id = word_pair[2]
+                correct = word_pair[2].strip().lower()
+                word_id = word_pair[3]
 
             is_correct = user_answer == correct
             await self.save_user_result(self.user_id, word_id, is_correct, update, context)

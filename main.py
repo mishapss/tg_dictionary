@@ -5,6 +5,7 @@ from models.user import User
 from models.word import Word, WordWizard, UpdateWordWizard, DeleteWordWizard, LessonWizard
 from db_connection import connection
 import json
+from models.keyboards import direction_keyboard
 
 user_manager = User()
 word_manager = Word()
@@ -14,7 +15,7 @@ delete_wizards = {} # user_id -> DeleteWordWizard
 lesson_wizard = {} # user_id -> LessonWizard
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привет, я телеграм бот для изучения языков.")
+    await update.message.reply_text("Привет, я телеграм бот для изучения языков.", reply_markup=direction_keyboard())
 
     username, user_id, chat_id = user_manager.get_id(update)
     user_manager.register(username, user_id, chat_id)
@@ -139,10 +140,10 @@ def main():
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("unregister", user_manager.unregister))
-    app.add_handler(CommandHandler("add_word", add_word_command))
-    app.add_handler(CommandHandler("update_word", update_word_command))
-    app.add_handler(CommandHandler("delete_word", delete_word_command))
-    app.add_handler(CommandHandler("create_lesson", create_lesson_command))
+    app.add_handler(CommandHandler("Добавить слово", add_word_command))
+    app.add_handler(CommandHandler("Обновить слово", update_word_command))
+    app.add_handler(CommandHandler("Удалить слово", delete_word_command))
+    app.add_handler(CommandHandler("Начать/создать урок", create_lesson_command))
 
  
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, universal_text_handler))
