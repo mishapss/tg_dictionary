@@ -1,4 +1,13 @@
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
+def main_menu_inline():
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("Добавить слово", callback_data="MENU:ADD_WORD")],
+        [InlineKeyboardButton("Обновить слово", callback_data="MENU:UPDATE_WORD")],
+        [InlineKeyboardButton("Удалить слово", callback_data="MENU:DELTE_WORD")],
+        [InlineKeyboardButton("Начать/создать урок", callback_data="MENU:START_WORD")],
+    ])
 
 def exercise_keyboard() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(

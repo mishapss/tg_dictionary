@@ -12,7 +12,7 @@ word_manager = Word()
 word_wizards = {} # user_id -> WordWizard
 update_wizards = {} # user_id -> UpdateWordWizard
 delete_wizards = {} # user_id -> DeleteWordWizard
-lesson_wizard = {} # user_id -> LessonWizard
+lesson_wizards = {} # user_id -> LessonWizard
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Привет, я телеграм бот для изучения языков.", reply_markup=direction_keyboard())
@@ -100,8 +100,8 @@ async def universal_text_handler(update, context):
         if wizard.state == "FINISHED":
             del word_wizards[user_id]
 
-    elif user_id in lesson_wizard:
-        wizard = lesson_wizard[user_id]
+    elif user_id in lesson_wizards:
+        wizard = lesson_wizards[user_id]
 
         if wizard.state == "INIT":
             user_input = update.message.text.strip().lower()
@@ -121,7 +121,7 @@ async def universal_text_handler(update, context):
             await wizard.start_lesson_wizard(update, context)
         
         if wizard.state == "FINISHED":
-            del lesson_wizard[user_id]
+            del lesson_wizards[user_id]
 
 def get_topic_id_by_name(topic_name: str):
     with connection.cursor() as cursor:
@@ -135,8 +135,67 @@ def get_topic_id_by_name(topic_name: str):
         return None
     return result[0]
 
+async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+    query = update.callback_query
+    await query.answer()
+
+    data = query.data 
+
+    if data.startswith("MENU:"):
+        cmd = data.split(":")[1]
+
+        if cmd in ("ADD", "UPDATE", "DELETE"):
+            wizard = word_wizards.get(user_id) or WordWizard()
+            word_wizards[user_id] = wizard
+
+            wizard.action = cmd
+            wizard.reset() #очищает временые поля, необязательно
+            wizard.state = "ASK_FIRST_INPUT"
+
+            if cmd == "ADD":
+                await query.message.reply_text("Введите новое немецкое слово:")
+            elif cmd == "UPDATE":
+                await query.message.reply_text("Введите слово, информацию о котором хотите изменить:")
+            else:
+                await query.message.reply_text("Введите слово, которое хотите удалить:")
+            return
+        
+        if cmd == "LESSON":
+            wizard = lesson_wizards.get(user_id) or LessonWizard()
+            lesson_wizards[user_id] = wizard
+
+            # wizard.reset()  # только если метод существует
+            wizard.state = "ASK_LESSON_TOPIC"
+
+            await query.message.reply_text("Ок! Напиши любое сообщение — я покажу список тем.")
+            return
+        
+async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+
+    if user_id in word_wizards:
+        wizard = word_wizards[user_id]
+        await wizard.handle(update, context)
+        if wizard.state == "FINISHED":
+            del word_wizards[user_id]
+
+    if user_id in lesson_wizards:
+        wizard = lesson_wizards[user_id]
+        await wizard.start_lesson_wizard(update, context)
+        if wizard.state == "FINISHED":
+            del lesson_wizards[user_id]
+        return
+
+    await update.message.reply_text("Открой меню и выбери действие.")
+
+
+
 def main():
     app = ApplicationBuilder().token("8248694982:AAEUGgXsEqqaTQq9CmN6R9bkQQmNE-6N6mg").build()
+
+    app.add_handler(CallbackQueryHandler(on_callback))
+    app.add_handler(MessageHandler(filter.TEXT & ~filters.COMMAND, on_text))
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("unregister", user_manager.unregister))
