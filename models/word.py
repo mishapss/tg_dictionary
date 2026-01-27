@@ -8,7 +8,8 @@ class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
         self.user_id = user_id
         self.topic_id = None
-        self.state = "ASK_WORD"
+        self.state = "INIT"
+        self.action = None
         self.word = None
         self.translate_rus = None
         self.translate_ger = None
@@ -31,7 +32,7 @@ class WordWizard: #мастер для добавления слова
 
           
 
-        if self.state == "ASK_WORD": 
+        if self.state == "ADD": 
             self.word = user_input
             self.state = "ASK_WORD_TYPE"
             await update.message.reply_text(
@@ -124,14 +125,14 @@ class UpdateWordWizard: # обновляет существующее состо
         self.word_id = None
         self.word = None
         #self.topic_id = None
-        self.state = "ASK_WORD" #firstly ask a word, that have to be changed 
+        self.state = "INIT" #firstly ask a word, that have to be changed 
         self.field_to_update = None
         
     async def update_word_info(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
         print(user_input)
 
-        if self.state == "ASK_WORD":
+        if self.state == "INIT":
             self.word = user_input
             print(self.word)
             print(self.state + "1")

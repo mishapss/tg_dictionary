@@ -1,4 +1,4 @@
-from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters
+from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, CallbackQueryHandler
 from telegram import Update
 from telegram.ext import ContextTypes
 from models.user import User
@@ -30,7 +30,7 @@ async def add_word_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def create_lesson_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
 
-    lesson_wizard[user_id] = LessonWizard(user_id, word_manager)
+    lesson_wizards[user_id] = LessonWizard(user_id, word_manager)
 
     with connection.cursor() as cursor:
         cursor.execute(
@@ -150,7 +150,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             word_wizards[user_id] = wizard
 
             wizard.action = cmd
-            wizard.reset() #очищает временые поля, необязательно
+            #wizard.reset() #очищает временые поля, необязательно
             wizard.state = "ASK_FIRST_INPUT"
 
             if cmd == "ADD":
@@ -194,10 +194,10 @@ async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = ApplicationBuilder().token("8248694982:AAEUGgXsEqqaTQq9CmN6R9bkQQmNE-6N6mg").build()
 
+    app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(MessageHandler(filter.TEXT & ~filters.COMMAND, on_text))
-
-    app.add_handler(CommandHandler("start", start))
+    """
     app.add_handler(CommandHandler("unregister", user_manager.unregister))
     app.add_handler(CommandHandler("add_word", add_word_command))
     app.add_handler(CommandHandler("update_word", update_word_command))
@@ -206,7 +206,8 @@ def main():
 
  
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, universal_text_handler))
-
+    """
+    
     print("Telegram Bot started!", flush=True)
     app.run_polling()
 
