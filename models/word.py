@@ -19,27 +19,30 @@ class WordWizard: #мастер для добавления слова
     async def handle(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
 
-        with connection.cursor() as cursor:
-            cursor.execute(
-                "SELECT word FROM words WHERE word = %s",
-                (user_input,)
-            )
-            word_to_check = cursor.fetchone()
-        
-        if word_to_check is not None and user_input.lower() == word_to_check[0].lower():
-            await update.message.reply_text("Данное слово уже есть в базе данных, его нельзя добавлять дважды")
-            self.state = "FINISHED"
+        if self.state == "ASK_FIRST_INPUT":
+            if self.action == "ADD":
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        "SELECT word FROM words WHERE word = %s",
+                        (user_input,)
+                    )
+                    word_to_check = cursor.fetchone()
+                
+                if word_to_check is not None and user_input.lower() == word_to_check[0].lower():
+                    await update.message.reply_text("Данное слово уже есть в базе данных, его нельзя добавлять дважды")
+                    self.state = "FINISHED"
+                    return
 
           
 
-        if self.state == "ADD": 
-            self.word = user_input
+            self.word = user_input 
             self.state = "ASK_WORD_TYPE"
             await update.message.reply_text(
                 "Теперь выберите тип слова (напишите его на немецком):\n"
                 "Substantiv (существительное), Verb (глагол), Adjektiv (прилагательное), "
                 "Adverb (наречие), Präposition (предлог), Konjunktion (союз)"
             )
+            return
             
         elif self.state == "ASK_WORD_TYPE":
             allowed_word_types = ["Substantiv", "Verb", "Adjektiv", "Adverb", "Präposition", "Konjunktion"]
@@ -126,13 +129,14 @@ class UpdateWordWizard: # обновляет существующее состо
         self.word = None
         #self.topic_id = None
         self.state = "INIT" #firstly ask a word, that have to be changed 
+        self.action = "UPDATE"
         self.field_to_update = None
         
     async def update_word_info(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
         print(user_input)
 
-        if self.state == "INIT":
+        if self.action == "UPDATE":
             self.word = user_input
             print(self.word)
             print(self.state + "1")
@@ -279,42 +283,51 @@ class DeleteWordWizard: #delete the word
         self.word_id = None
         self.word = None
         self.state = "ASK_WORD" #firstly ask a word, that have to be deleted
+        self.action = "DELETE"
 
     async def delete_word_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
+        print(user_input, self.action, "2")
 
+        if self.state == "ASK_WORD":
+            with connection.cursor() as cursor:
+                cursor.execute(
+                    "SELECT word_id FROm words WHERE LOWER(word) = %s",
+                    (user_input.lower(),)
+                )
+                result = cursor.fetchone()
+
+            if result is None:
+                await update.message.reply_text("❌ Такого слова нет в базе данных.")
+                self.state = "FINISHED"
+                return
+
+                
+            self.word = user_input
+            self.word_id = result[0]
+            self.state = "ASK_CONFIRMATION"
+
+            await update.message.reply_text(
+                f"Ты действительно хочешь удалить слово '{self.word}'?\n"
+                "Напиши 'да', чтобы подтвердить или что угодно другое для отмены."
+            )
+            return
+        
         if self.state == "ASK_CONFIRMATION":
             if user_input.lower() == "да":
                 with connection.cursor() as cursor:
-                    cursor.execute("DELETE FROM words WHERE word = %s", (self.word,))
+                    cursor.execute(
+                    "DELETE FROM words WHERE LOWER(word) = %s",
+                    (self.word.lower(),)
+                    )
                 connection.commit()
                 await update.message.reply_text(f"Слово '{self.word}' успешно удалено.")
             else:
                 await update.message.reply_text("Удаление отменено.")
-
+            
             self.state = "FINISHED"
-            return
-
-        with connection.cursor() as cursor:
-            cursor.execute(
-                "SELECT word_id FROM words WHERE LOWER(word) = %s",
-                (user_input.lower(),)
-            )
-            result = cursor.fetchone()
-
-        if result is None:
-            await update.message.reply_text("❌ Такого слова нет в базе данных.")
-            self.state = "FINISHED"
-            return
-
-        self.word = user_input
-        self.word_id = result[0]
-        self.state = "ASK_CONFIRMATION"
-
-        await update.message.reply_text(
-            f"Ты действительно хочешь удалить слово '{self.word}'?\nНапиши 'да', чтобы подтвердить или что угодно другое для отмены."
-        )
-
+            return        
+        
 class LessonWizard:
     def __init__(self, user_id: int, word_manager: "Word"):
         self.user_id = user_id
