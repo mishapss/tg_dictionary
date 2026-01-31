@@ -5,8 +5,8 @@ from models.user import User
 from models.word import Word, WordWizard, UpdateWordWizard, DeleteWordWizard, LessonWizard
 from db_connection import connection
 import json
-from models.keyboards import main_menu_inline 
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from models.keyboards import main_menu_inline, direction_keyboard 
+
 
 user_manager = User()
 word_manager = Word()
@@ -16,9 +16,6 @@ delete_wizards = {} # user_id -> DeleteWordWizard
 lesson_wizards = {} # user_id -> LessonWizard
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    kb = InlineKeyboardMarkup([
-        [InlineKeyboardButton("Добавить слово", callback_data="MENU:ADD")]
-    ])
     await update.message.reply_text("Привет, я телеграм бот для изучения языков.", reply_markup=main_menu_inline())
 
     username, user_id, chat_id = user_manager.get_id(update)
@@ -149,6 +146,44 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     data = query.data 
 
+    # 1) выбор режима урока (создать тему / начать урок)
+    if data.startswith("LESSON_MODE:"):
+        cmd = data.split(":", 1)[1]
+
+        wizard = lesson_wizards.get(user_id)
+        if wizard is None:
+            await query.message.reply_text("Сначала начни урок через меню")
+            return
+        
+        if cmd == "CREATE":
+            wizard.state = "CREATE_TOPIC"
+            await query.message.reply_text("Ок! Введи название новой темы:")
+            return
+
+        if cmd == "START":
+            wizard.state = "ASK_LESSON_TOPIC"
+            await wizard.show_topics(query.message)
+            return
+        
+        await query.message.reply_text(f"Неизвестная кнопка: {data}")
+        return
+    
+    #выбор направления упражнения
+    if data.startswith("LESSON_EXERCISE:"):
+        cmd = data.split(":", 1)[1]
+
+        wizard = lesson_wizards.get(user_id)
+        if wizard is None:
+            await query.message.reply_text("Сначала начни урок через меню")
+            return
+        
+        wizard.exercise_direction = cmd
+        wizard.current_index = 0
+        await query.message.reply_text("Отлично! Начинаем.")
+        await wizard.ask_next_word(query.message)
+        return
+    
+
     if data.startswith("MENU:"):
         cmd = data.split(":")[1]
         print("on_callback3:", update.callback_query.data)
@@ -179,18 +214,17 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             delete_wizards[user_id] = wizard
             wizard.action = "DELETE"
             #wizard.state = "ASK_FIRST_INPUT"
-            await query.message.reply_text("Введите слово, которое хотите удалитьццц:")
+            await query.message.reply_text("Введите слово, которое хотите удалить:")
             print(wizard.action, "1")
             return
             
-        
         if cmd == "START_LESSON":
             wizard = lesson_wizards.get(user_id) or LessonWizard(user_id, word_manager)
             lesson_wizards[user_id] = wizard
-            # wizard.reset()  # только если метод существует
-            wizard.state = "ASK_LESSON_TOPIC"
-            await query.message.reply_text("Ок! Напиши любое сообщение — я покажу список тем.")
+            wizard.state = "INIT"
+            await query.message.reply_text("Хотите создать новую тему для урока или пройти урок по уже существующей теме?", reply_markup=direction_keyboard())
             return
+        
         
 async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print("on_text:", update.message.text)
@@ -220,12 +254,17 @@ async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if user_id in lesson_wizards:
         wizard = lesson_wizards[user_id]
-        await wizard.start_lesson_wizard(update, context)
+        if wizard.state == "CREATE_TOPIC":
+            await wizard.create_new_topic_lesson(update, context)
+        else:
+            await wizard.start_lesson_wizard(update, context)
+
         if wizard.state == "FINISHED":
             del lesson_wizards[user_id]
         return
 
     await update.message.reply_text("Открой меню и выбери действие.")
+    
 
 
 

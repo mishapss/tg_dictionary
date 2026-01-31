@@ -9,12 +9,11 @@ def main_menu_inline():
         [InlineKeyboardButton("Начать/создать урок", callback_data="MENU:START_LESSON")],
     ])
 
-def exercise_keyboard() -> ReplyKeyboardMarkup:
-    return ReplyKeyboardMarkup(
-        [["с немецкого на русский"], ["с русского на немецкий"]],
-        resize_keyboard=True,
-        one_time_keyboard=True
-    ) 
+def exercise_keyboard():
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("с немецкого на русский", callback_data="LESSON_EXERCISE:GER_TO_RUS")],
+        [InlineKeyboardButton("с русского на немецкий", callback_data="LESSON_EXERCISE:RUS_TO_GER")],
+    ])
 
 def lesson_menu_keyboard() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(
@@ -23,9 +22,10 @@ def lesson_menu_keyboard() -> ReplyKeyboardMarkup:
     )
 
 def direction_keyboard() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(
-        [["Добавить слово"], ["Обновить слово"], ["Удалить слово"], ["Начать/создать урок"]]
-    )
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("создать тему для урока", callback_data="LESSON_MODE:CREATE")],
+        [InlineKeyboardButton("пройти урок по теме", callback_data="LESSON_MODE:START")],
+    ])   
 
 def remove_keyboard():
     return ReplyKeyboardRemove()

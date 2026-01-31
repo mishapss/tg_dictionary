@@ -2,7 +2,8 @@ from db_connection import connection
 from telegram import Update
 from telegram.ext import ContextTypes
 import random
-#from keyboards import direction_keyboard, lesson_menu_keyboard, remove_keyboard, exercise_keyboard
+from models.keyboards import main_menu_inline, exercise_keyboard, direction_keyboard
+
 
 class WordWizard: #мастер для добавления слова
     def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
@@ -29,7 +30,7 @@ class WordWizard: #мастер для добавления слова
                     word_to_check = cursor.fetchone()
                 
                 if word_to_check is not None and user_input.lower() == word_to_check[0].lower():
-                    await update.message.reply_text("Данное слово уже есть в базе данных, его нельзя добавлять дважды")
+                    await update.message.reply_text("Данное слово уже есть в базе данных, его нельзя добавлять дважды", reply_markup=main_menu_inline())
                     self.state = "FINISHED"
                     return
 
@@ -119,7 +120,7 @@ class WordWizard: #мастер для добавления слова
             ) # сохранение нового слова в бд
 
             self.state = "FINISHED"
-            await update.message.reply_text("Слово сохранено")
+            await update.message.reply_text("Слово сохранено", reply_markup=main_menu_inline())
 
 class UpdateWordWizard: # обновляет существующее состояние
     def __init__(self, user_id: int, word_manager: "Word"):
@@ -129,14 +130,14 @@ class UpdateWordWizard: # обновляет существующее состо
         self.word = None
         #self.topic_id = None
         self.state = "INIT" #firstly ask a word, that have to be changed 
-        self.action = "UPDATE"
+        #self.action = "UPDATE"
         self.field_to_update = None
         
     async def update_word_info(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
         print(user_input)
 
-        if self.action == "UPDATE":
+        if self.state == "INIT":
             self.word = user_input
             print(self.word)
             print(self.state + "1")
@@ -149,9 +150,9 @@ class UpdateWordWizard: # обновляет существующее состо
                 word_to_check = cursor.fetchone()
         
             if word_to_check is None:
-                await update.message.reply_text("Такого слова нет в базе данных. Сначала добавьте слово в базу данных")
+                await update.message.reply_text("Такого слова нет в базе данных. Сначала добавьте слово в базу данных", reply_markup=main_menu_inline())
                 self.state = "FINISHED"
-            
+                
             with connection.cursor() as cursor:
                 cursor.execute(
                     "SELECT word_id, topic_id, word, translate_ger, translate_rus, sex, type FROM words WHERE LOWER(word) = %s",
@@ -160,7 +161,7 @@ class UpdateWordWizard: # обновляет существующее состо
                 row = cursor.fetchone() 
 
                 if row is None:
-                    await update.message.reply_text("Такого слова нет в базе данных")
+                    await update.message.reply_text("Такого слова нет в базе данных", reply_markup=main_menu_inline())
                     self.state = "FINISHED"
                     return
                 
@@ -272,7 +273,7 @@ class UpdateWordWizard: # обновляет существующее состо
             else: 
                 self.word_manager.update_word(self.field_to_update, self.word_id, value)
 
-            await update.message.reply_text("Информация о слове обновлена")
+            await update.message.reply_text("Информация о слове обновлена", reply_markup=main_menu_inline())
             self.state = "FINISHED"
             return
 
@@ -298,7 +299,7 @@ class DeleteWordWizard: #delete the word
                 result = cursor.fetchone()
 
             if result is None:
-                await update.message.reply_text("❌ Такого слова нет в базе данных.")
+                await update.message.reply_text("❌ Такого слова нет в базе данных.", reply_markup=main_menu_inline())
                 self.state = "FINISHED"
                 return
 
@@ -321,9 +322,9 @@ class DeleteWordWizard: #delete the word
                     (self.word.lower(),)
                     )
                 connection.commit()
-                await update.message.reply_text(f"Слово '{self.word}' успешно удалено.")
+                await update.message.reply_text(f"Слово '{self.word}' успешно удалено.", reply_markup=main_menu_inline())
             else:
-                await update.message.reply_text("Удаление отменено.")
+                await update.message.reply_text("Удаление отменено.", reply_markup=main_menu_inline())
             
             self.state = "FINISHED"
             return        
@@ -340,16 +341,22 @@ class LessonWizard:
         self.topic_id = None
        
     async def create_new_topic_lesson(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        if self.state != "AWAITING_TOPIC_NAME":
-            await update.message.reply_text(
-                "Здесь ты можешь создать новую тему для урока и добавить её в свои темы.\n"
-                "Напиши новую тему для урока:"
-            )
-            self.state = "AWAITING_TOPIC_NAME"
+        if self.state != "CREATE_TOPIC":
             return
         
         user_input = update.message.text.strip()
         new_topic = user_input
+
+        if not new_topic:
+            await update.message.reply_text("Название темы не может быть пустым. Введи ещё раз:")
+            return
+
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1 FROM topics WHERE LOWER(topic_name) = %s", (new_topic.lower(),))
+            exists = cursor.fetchone()
+        if exists:
+            await update.message.reply_text("Такая тема уже существует. Введи другое название:")
+            return
 
         with connection.cursor() as cursor: 
             cursor.execute(
@@ -357,7 +364,7 @@ class LessonWizard:
                 (new_topic,) # кортеж из одного элемента
                 )
         connection.commit()
-        await update.message.reply_text("Тема добавлена. Введи '/create_lesson' чтобы начать заново.")
+        await update.message.reply_text("Тема добавлена.", reply_markup=main_menu_inline())
         self.state = "FINISHED"
 
     async def save_user_result(self, user_id: int, word_id: int, is_correct: bool, update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -378,8 +385,6 @@ class LessonWizard:
             )
         connection.commit()
 
-        await update.message.reply_text("0 сохранен")
-
     async def get_failed_words(self, user_id: int):
         with connection.cursor() as cursor:
             cursor.execute(
@@ -392,21 +397,24 @@ class LessonWizard:
             )
             return cursor.fetchall()
 
-        
+    async def show_topics(self, message):
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT topic_name FROM topics ORDER BY topic_name")
+            rows = cursor.fetchall()
+
+        if not rows:
+            await message.reply_text("Пока нет ни одной темы. Сначала создай тему.")
+            self.state = "FINISHED"
+            return
+
+        topics = [r[0] for r in rows]
+        await message.reply_text("Доступные темы:\n" + "\n".join(topics))
+        self.state = "GET_TOPIC_NAME"
+
     async def start_lesson_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_id = update.effective_user.id
-        if self.state == "ASK_LESSON_TOPIC":
-            with connection.cursor() as cursor: # get the topics from db to show the user
-                cursor.execute(
-                    "SELECT topic_name FROM topics"   
-                )
-                topics_row = cursor.fetchall() 
-            all_topics = [row[0] for row in topics_row]
-            await update.message.reply_text("Доступные темы:\n" + "\n".join(all_topics))
-            self.state = "GET_TOPIC_NAME"
-            return
-        
-        elif self.state == "GET_TOPIC_NAME":
+
+        if self.state == "GET_TOPIC_NAME":
             chosen_topic = update.message.text.strip().lower()
             with connection.cursor() as cursor:
                 cursor.execute(
@@ -462,24 +470,11 @@ class LessonWizard:
             self.current_index = 0
             await update.message.reply_text(
                 "Что именно ты хочешь тренировать: перевод с немецкого на русский или с русского на немецкий?\n" 
-                "Введите пожалуйста 'с немецкого на русский' или 'с русского на немецкий'"
+                "Введите пожалуйста 'с немецкого на русский' или 'с русского на немецкий'", reply_markup=exercise_keyboard()
             )
-            self.state = "ASK_EXERCISE"
-
-        elif self.state == "ASK_EXERCISE":
-            choice = update.message.text.strip().lower()
-            if "немецкого" in choice:
-                self.exercise_direction = "GER_TO_RUS"
-            elif "русского" in choice:
-                self.exercise_direction = "RUS_TO_GER"
-            else:
-                await update.message.reply_text("Пожалуйста, введите одно из направлений")
-                return
-            self.current_index = 0
-            self.state = "ASK_LESSON_WORD"
-            await self.ask_next_word(update)
+            self.state = "WAIT_EXERCISE_DIRECTION"
             return
-        
+               
         elif self.state == "CHECK_WORD":
             user_answer = update.message.text.strip().lower()
             word_pair = self.words[self.current_index]
@@ -501,13 +496,13 @@ class LessonWizard:
 
             self.current_index += 1
             if self.current_index >= self.selected_word_count:
-                await update.message.reply_text("Урок завершен")
+                await update.message.reply_text("Урок завершен", reply_markup=main_menu_inline())
                 self.state = "FINISHED"
             else:
                 self.state = "ASK_LESSON_WORD"
-                await self.ask_next_word(update)
+                await self.ask_next_word(update.message)
        
-    async def ask_next_word(self, update: Update):
+    async def ask_next_word(self, message):
         word_pair = self.words[self.current_index]
         
         if self.exercise_direction == "GER_TO_RUS":
@@ -515,7 +510,7 @@ class LessonWizard:
         else:
             question = word_pair[1]
         
-        await update.message.reply_text(f"Как переводится: {question}?")
+        await message.reply_text(f"Как переводится: {question}?")
         self.state = "CHECK_WORD"
                 
                 
