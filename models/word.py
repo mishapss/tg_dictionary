@@ -397,7 +397,7 @@ class LessonWizard:
             )
             return cursor.fetchall()
 
-    async def show_topics(self, message):
+    async def show_topics_for_lesson(self, message):
         with connection.cursor() as cursor:
             cursor.execute("SELECT topic_name FROM topics ORDER BY topic_name")
             rows = cursor.fetchall()
@@ -410,7 +410,32 @@ class LessonWizard:
         topics = [r[0] for r in rows]
         await message.reply_text("Доступные темы:\n" + "\n".join(topics))
         self.state = "GET_TOPIC_NAME"
+    
+    """
+    async def show_topics_to_delete(self, message):
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT topic_name FROM topics ORDER BY topic_name")
+            rows = cursor.fetchall()
 
+        if not rows:
+            await message.reply_text("Пока нет ни одной темы. Сначала создай тему.")
+            self.state = "FINISHED"
+            return
+
+        topics = [r[0] for r in rows]
+        await message.reply_text("Доступные темы:\n" + "\n".join(topics) + "Какую тему хотите удалить?")
+        self.state = "ASK_TOPIC_FOR_DELETE"
+
+        topic_to_delete = update.message.text.lower()
+        
+        if topic_to_delete not in rows:
+            await update.message.reply_text("Введите правильную тему")
+            return
+        else:
+            await update.message.reply_text("Вы точно хотите удалить эту тему? Если вы её удалите, то тема пропадет из всех слов, к которым она привязана. Вы также не сможете начать урок по этой теме и вам заново придется добавлять слова в тему.")
+            #может оно и не надо? оставлю пока закоменченым
+        """
+    
     async def start_lesson_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_id = update.effective_user.id
 

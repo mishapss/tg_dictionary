@@ -6,7 +6,7 @@ def main_menu_inline():
         [InlineKeyboardButton("Добавить слово", callback_data="MENU:ADD_WORD")],
         [InlineKeyboardButton("Обновить слово", callback_data="MENU:UPDATE_WORD")],
         [InlineKeyboardButton("Удалить слово", callback_data="MENU:DELETE_WORD")],
-        [InlineKeyboardButton("Начать/создать урок", callback_data="MENU:START_LESSON")],
+        [InlineKeyboardButton("Начать/создать/удалить урок", callback_data="MENU:START_LESSON")],
     ])
 
 def exercise_keyboard():
@@ -25,6 +25,7 @@ def direction_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("создать тему для урока", callback_data="LESSON_MODE:CREATE")],
         [InlineKeyboardButton("пройти урок по теме", callback_data="LESSON_MODE:START")],
+        #[InlineKeyboardButton("удалить тему урока", callback_data="LESSON_MODE:DELETE")],
     ])   
 
 def remove_keyboard():

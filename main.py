@@ -162,11 +162,16 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         if cmd == "START":
             wizard.state = "ASK_LESSON_TOPIC"
-            await wizard.show_topics(query.message)
+            await wizard.show_topics_for_lesson(query.message)
             return
+        
+        """
+        if cmd == "DELETE":
+            wizard.state = ""
         
         await query.message.reply_text(f"Неизвестная кнопка: {data}")
         return
+        """
     
     #выбор направления упражнения
     if data.startswith("LESSON_EXERCISE:"):
