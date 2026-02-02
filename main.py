@@ -296,8 +296,6 @@ def main():
 if __name__ == '__main__':
     main()
     
-
-
 '''
 def insert_word(entry):
     topic_id = get_topic_id_by_name(entry["topic"]) if entry["topic"] else None

@@ -22,21 +22,27 @@ class WordWizard: #мастер для добавления слова
 
         if self.state == "ASK_FIRST_INPUT":
             if self.action == "ADD":
-                with connection.cursor() as cursor:
-                    cursor.execute(
-                        "SELECT word FROM words WHERE word = %s",
-                        (user_input,)
+                try:
+                    with connection.cursor() as cursor:
+                        cursor.execute(
+                            "SELECT 1 FROM words WHERE LOWER(word) = %s",
+                            (user_input.lower(),)
+                        )
+                        exists = cursor.fetchone()
+                except Exception as e:
+                    connection.rollback()
+                    await update.message.reply_text(f"Ошибка БД при проверке слова: {e}")
+                    return
+
+                if exists:
+                    await update.message.reply_text(
+                        "Данное слово уже есть в базе данных, его нельзя добавлять дважды",
+                        reply_markup=main_menu_inline()
                     )
-                    word_to_check = cursor.fetchone()
-                
-                if word_to_check is not None and user_input.lower() == word_to_check[0].lower():
-                    await update.message.reply_text("Данное слово уже есть в базе данных, его нельзя добавлять дважды", reply_markup=main_menu_inline())
                     self.state = "FINISHED"
                     return
 
-          
-
-            self.word = user_input 
+            self.word = user_input
             self.state = "ASK_WORD_TYPE"
             await update.message.reply_text(
                 "Теперь выберите тип слова (напишите его на немецком):\n"
@@ -44,6 +50,7 @@ class WordWizard: #мастер для добавления слова
                 "Adverb (наречие), Präposition (предлог), Konjunktion (союз)"
             )
             return
+
             
         elif self.state == "ASK_WORD_TYPE":
             allowed_word_types = ["Substantiv", "Verb", "Adjektiv", "Adverb", "Präposition", "Konjunktion"]
@@ -503,21 +510,26 @@ class LessonWizard:
         elif self.state == "CHECK_WORD":
             user_answer = update.message.text.strip().lower()
             word_pair = self.words[self.current_index]
+
+            word = word_pair[0]
+            translate_rus = word_pair[1]
+            translate_ger = word_pair[2]
+            word_id = word_pair[3]           
             
             if self.exercise_direction == "GER_TO_RUS":
-                correct = word_pair[1].strip().lower()
-                word_id = word_pair[3]
+                correct_list = self.split_synonyms(translate_rus)
+                correct_to_show = translate_rus
             else:
-                correct = word_pair[2].strip().lower()
-                word_id = word_pair[3]
+                correct_list = self.split_synonyms(translate_ger)
+                correct_to_show = translate_ger
 
-            is_correct = user_answer == correct
+            is_correct = user_answer in correct_list
             await self.save_user_result(self.user_id, word_id, is_correct, update, context)
 
             if is_correct:
                 await update.message.reply_text("Правильно")
             else:
-                await update.message.reply_text(f"Неправильно. Правильный ответ: {correct}")
+                await update.message.reply_text(f"Неправильно. возможные ответы: {correct_to_show}")
 
             self.current_index += 1
             if self.current_index >= self.selected_word_count:
@@ -526,14 +538,24 @@ class LessonWizard:
             else:
                 self.state = "ASK_LESSON_WORD"
                 await self.ask_next_word(update.message)
-       
+
+    def split_synonyms(self, text: str) -> list[str]:
+        if not text:
+            return []
+        return [x.strip().lower() for x in text.split(",") if x.strip()]
+
+
     async def ask_next_word(self, message):
         word_pair = self.words[self.current_index]
+
+        word = word_pair[0]
+        translate_rus = word_pair[1]
         
         if self.exercise_direction == "GER_TO_RUS":
-            question = word_pair[0]
+            question = word
         else:
-            question = word_pair[1]
+            rus_list = self.split_synonyms(translate_rus)
+            question = random.choice(rus_list) if rus_list else translate_rus
         
         await message.reply_text(f"Как переводится: {question}?")
         self.state = "CHECK_WORD"
