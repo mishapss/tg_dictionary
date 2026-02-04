@@ -2,8 +2,6 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from db_connection import connection
 
-
-
 print(">>> user.py loaded from:", __file__)
 
 class User:
@@ -17,7 +15,7 @@ class User:
         print(username, user_id, chat_id)
         return username, user_id, chat_id
 
-    def register(self, username, user_id, chat_id): #save new user in datebase
+    def register(self, username, user_id, chat_id):
         with connection.cursor() as cursor:
             cursor.execute(
                 "INSERT INTO users (user_id, username, chat_id) VALUES (%s, %s, %s)",
@@ -25,8 +23,7 @@ class User:
             )
             connection.commit()
 
-
-    async def unregister(self, update, context): #delete user from datebase
+    async def unregister(self, update, context):
         user_id = update.effective_user.id
 
         with connection.cursor() as cursor:

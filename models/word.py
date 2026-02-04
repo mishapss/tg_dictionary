@@ -2,11 +2,11 @@ from db_connection import connection
 from telegram import Update
 from telegram.ext import ContextTypes
 import random
-from models.keyboards import main_menu_inline, exercise_keyboard, direction_keyboard
+from models.keyboards import main_menu_inline, exercise_keyboard
 
 
-class WordWizard: #мастер для добавления слова
-    def __init__(self, user_id: int, word_manager: "Word"): #конструктор, инициализирует объект
+class WordWizard:
+    def __init__(self, user_id: int, word_manager: "Word"):
         self.user_id = user_id
         self.topic_id = None
         self.state = "INIT"
@@ -15,7 +15,7 @@ class WordWizard: #мастер для добавления слова
         self.translate_rus = None
         self.translate_ger = None
         self.gender = None
-        self.word_manager = word_manager #передает экземляр word в конструктор, чтобы конструктор мог вызывать методы word_manager
+        self.word_manager = word_manager
 
     async def handle(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_input = update.message.text.strip()
@@ -50,7 +50,6 @@ class WordWizard: #мастер для добавления слова
                 "Adverb (наречие), Präposition (предлог), Konjunktion (союз)"
             )
             return
-
             
         elif self.state == "ASK_WORD_TYPE":
             allowed_word_types = ["Substantiv", "Verb", "Adjektiv", "Adverb", "Präposition", "Konjunktion"]
@@ -87,7 +86,7 @@ class WordWizard: #мастер для добавления слова
         elif self.state == "ASK_GENDER":
             if user_input not in ["der", "die", "das"]:
                 await update.message.reply_text("Введите правильный род слова")
-                return #возвращаемся из функции, чтобы потом снова проверить этот блок
+                return
             
             self.gender = user_input
             self.state = "ASK_TOPIC"
@@ -97,7 +96,6 @@ class WordWizard: #мастер для добавления слова
             )
             return
 
-
         elif self.state == "ASK_TOPIC":
             topic_name = user_input.strip().lower()
 
@@ -106,7 +104,7 @@ class WordWizard: #мастер для добавления слова
                     "SELECT topic_id FROM topics WHERE LOWER(topic_name) = %s;",
                     (topic_name,)
                 )
-                result = cursor.fetchone() # получаемм первую строку результата запроса
+                result = cursor.fetchone()
                 
                 if result is None:
                     await update.message.reply_text(
@@ -115,7 +113,7 @@ class WordWizard: #мастер для добавления слова
                     )
                     return
 
-                self.topic_id = result[0] # сохраняем идентификатор темы
+                self.topic_id = result[0]
         
             self.word_manager.add_word(
                 self.topic_id,
@@ -124,20 +122,18 @@ class WordWizard: #мастер для добавления слова
                 self.translate_rus,
                 self.gender,
                 self.word_type,
-            ) # сохранение нового слова в бд
+            )
 
             self.state = "FINISHED"
             await update.message.reply_text("Слово сохранено", reply_markup=main_menu_inline())
 
-class UpdateWordWizard: # обновляет существующее состояние
+class UpdateWordWizard:
     def __init__(self, user_id: int, word_manager: "Word"):
         self.user_id = user_id
         self.word_manager = word_manager
         self.word_id = None
         self.word = None
-        #self.topic_id = None
-        self.state = "INIT" #firstly ask a word, that have to be changed 
-        #self.action = "UPDATE"
+        self.state = "INIT" 
         self.field_to_update = None
         
     async def update_word_info(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -197,7 +193,6 @@ class UpdateWordWizard: # обновляет существующее состо
                 f"тип:  {type}"
                 )
             return
-            
             
         elif self.state == "CHOOSE_FIELD":
             choice = update.message.text.strip().lower()
@@ -284,13 +279,13 @@ class UpdateWordWizard: # обновляет существующее состо
             self.state = "FINISHED"
             return
 
-class DeleteWordWizard: #delete the word
+class DeleteWordWizard:
     def __init__(self, user_id: int, word_manager: "Word"):
         self.user_id = user_id
         self.word_manager = word_manager
         self.word_id = None
         self.word = None
-        self.state = "ASK_WORD" #firstly ask a word, that have to be deleted
+        self.state = "ASK_WORD"
         self.action = "DELETE"
 
     async def delete_word_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -309,7 +304,6 @@ class DeleteWordWizard: #delete the word
                 await update.message.reply_text("❌ Такого слова нет в базе данных.", reply_markup=main_menu_inline())
                 self.state = "FINISHED"
                 return
-
                 
             self.word = user_input
             self.word_id = result[0]
@@ -368,8 +362,9 @@ class LessonWizard:
         with connection.cursor() as cursor: 
             cursor.execute(
                 "INSERT INTO topics (topic_name) VALUES (%s)",
-                (new_topic,) # кортеж из одного элемента
+                (new_topic,)
                 )
+                
         connection.commit()
         await update.message.reply_text("Тема добавлена.", reply_markup=main_menu_inline())
         self.state = "FINISHED"
@@ -417,32 +412,7 @@ class LessonWizard:
         topics = [r[0] for r in rows]
         await message.reply_text("Доступные темы:\n" + "\n".join(topics))
         self.state = "GET_TOPIC_NAME"
-    
-    """
-    async def show_topics_to_delete(self, message):
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT topic_name FROM topics ORDER BY topic_name")
-            rows = cursor.fetchall()
-
-        if not rows:
-            await message.reply_text("Пока нет ни одной темы. Сначала создай тему.")
-            self.state = "FINISHED"
-            return
-
-        topics = [r[0] for r in rows]
-        await message.reply_text("Доступные темы:\n" + "\n".join(topics) + "Какую тему хотите удалить?")
-        self.state = "ASK_TOPIC_FOR_DELETE"
-
-        topic_to_delete = update.message.text.lower()
-        
-        if topic_to_delete not in rows:
-            await update.message.reply_text("Введите правильную тему")
-            return
-        else:
-            await update.message.reply_text("Вы точно хотите удалить эту тему? Если вы её удалите, то тема пропадет из всех слов, к которым она привязана. Вы также не сможете начать урок по этой теме и вам заново придется добавлять слова в тему.")
-            #может оно и не надо? оставлю пока закоменченым
-        """
-    
+       
     async def start_lesson_wizard(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_id = update.effective_user.id
 
@@ -474,8 +444,7 @@ class LessonWizard:
                         f"сколько слов хотите учить? слов доступно {count_failed_words}"
                     )
                     self.state = "ASK_NUMBER_OF_WORDS"
-                    return
-                
+                    return           
                         
                 cursor.execute(
                     "SELECT word, translate_rus, translate_ger, word_id FROM words WHERE topic_id = %s",
@@ -497,7 +466,7 @@ class LessonWizard:
                 return
                         
             self.selected_word_count = count
-            random.shuffle(self.words) #mix the words
+            random.shuffle(self.words)
             self.words = self.words[:count]
             self.current_index = 0
             await update.message.reply_text(
@@ -558,11 +527,8 @@ class LessonWizard:
             question = random.choice(rus_list) if rus_list else translate_rus
         
         await message.reply_text(f"Как переводится: {question}?")
-        self.state = "CHECK_WORD"
-                
-                
-            
-        
+        self.state = "CHECK_WORD"             
+                    
 
 class Word():
     def __init__(self):
@@ -599,33 +565,21 @@ class Word():
                 return False
             return True
 
-    def add_word(self, topic_id, word, translate_ger, translate_rus, gender, word_type): #add new word in datebase with topic, value(0/1), translate_russian, translate_german, language
+    def add_word(self, topic_id, word, translate_ger, translate_rus, gender, word_type):
         with connection.cursor() as cursor:
             cursor.execute(
                 """
                 INSERT INTO words (topic_id, word, translate_ger, translate_rus, sex, type)
                 VALUES (%s, %s, %s, %s, %s, %s)
                 """,
-                (topic_id, word, translate_ger, translate_rus, gender, word_type)# word_id, topic_id, word_type
+                (topic_id, word, translate_ger, translate_rus, gender, word_type)
             )
         connection.commit()
 
-    def update_word(self, field, word_id, value): #update an information about word and save it in datebase
+    def update_word(self, field, word_id, value):
         with connection.cursor() as cursor:
             cursor.execute(
                 f"UPDATE words SET {field} = %s  WHERE word_id = %s",
                 (value, word_id)
             )
         connection.commit()
-
-    def delete_word(self): #delete a word from datebase вообще не нужен оказалось
-        pass
-
-    def set_error_status(self): #set an error status (user, word, value(0/1) for a word, which was false. user answers false and hier the program will set an error status for this word
-        pass
-
-    def set_show_status(self): #show the user which words he answered wrong?
-        pass
-
-    def set_favourite_status(self): #set for this word a status "favourite"
-        pass

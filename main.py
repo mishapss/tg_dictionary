@@ -4,16 +4,15 @@ from telegram.ext import ContextTypes
 from models.user import User
 from models.word import Word, WordWizard, UpdateWordWizard, DeleteWordWizard, LessonWizard
 from db_connection import connection
-import json
 from models.keyboards import main_menu_inline, direction_keyboard 
 
 
 user_manager = User()
 word_manager = Word()
-word_wizards = {} # user_id -> WordWizard
-update_wizards = {} # user_id -> UpdateWordWizard
-delete_wizards = {} # user_id -> DeleteWordWizard
-lesson_wizards = {} # user_id -> LessonWizard
+word_wizards = {}
+update_wizards = {}
+delete_wizards = {}
+lesson_wizards = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Привет, я телеграм бот для изучения языков.", reply_markup=main_menu_inline())
@@ -40,7 +39,6 @@ async def create_lesson_command(update: Update, context: ContextTypes.DEFAULT_TY
         topics_row = cursor.fetchone()
 
     await update.message.reply_text("Хотите создать новую тему для урока или пройти урок по уже существующей теме?")
-    #await update.message.reply_text("Вот все темы, которые доступны. Введите тему, которую вы хотите натренировать:" + topics_row)
 
 async def word_add_flow(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
@@ -54,7 +52,7 @@ async def word_add_flow(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if wizard.state == "FINISHED":
         del word_wizards[user_id]
 
-async def update_word_command(update: Update, context: ContextTypes.DEFAULT_TYPE): # handler for command /update_word
+async def update_word_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
 
     update_wizards[user_id] = UpdateWordWizard(user_id, word_manager)
@@ -146,7 +144,6 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     data = query.data 
 
-    # 1) выбор режима урока (создать тему / начать урок)
     if data.startswith("LESSON_MODE:"):
         cmd = data.split(":", 1)[1]
 
@@ -164,16 +161,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             wizard.state = "ASK_LESSON_TOPIC"
             await wizard.show_topics_for_lesson(query.message)
             return
-        
-        """
-        if cmd == "DELETE":
-            wizard.state = ""
-        
-        await query.message.reply_text(f"Неизвестная кнопка: {data}")
-        return
-        """
-    
-    #выбор направления упражнения
+
     if data.startswith("LESSON_EXERCISE:"):
         cmd = data.split(":", 1)[1]
 
@@ -196,7 +184,6 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if cmd == "ADD_WORD":
             print("on_callback4:", update.callback_query.data)
             wizard = word_wizards.get(user_id) or WordWizard(user_id, word_manager)
-            #wizard.reset() #очищает временые поля, необязательно
             word_wizards[user_id] = wizard
             wizard.action = "ADD"
             wizard.state = "ASK_FIRST_INPUT"
@@ -205,20 +192,16 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         if cmd == "UPDATE_WORD":
             wizard = update_wizards.get(user_id) or UpdateWordWizard(user_id, word_manager)
-            #wizard.reset() #очищает временые поля, необязательно
             update_wizards[user_id] = wizard
             wizard.action = "UPDATE"
             wizard.state = "INIT"
-            #wizard.state = "ASK_FIRST_INPUT"
             await query.message.reply_text("Введите слово, информацию о котором хотите изменить:")
             return
         
         if cmd == "DELETE_WORD":
             wizard = delete_wizards.get(user_id) or DeleteWordWizard(user_id, word_manager)
-            #wizard.reset() #очищает временые поля, необязательно
             delete_wizards[user_id] = wizard
             wizard.action = "DELETE"
-            #wizard.state = "ASK_FIRST_INPUT"
             await query.message.reply_text("Введите слово, которое хотите удалить:")
             print(wizard.action, "1")
             return
@@ -229,8 +212,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             wizard.state = "INIT"
             await query.message.reply_text("Хотите создать новую тему для урока или пройти урок по уже существующей теме?", reply_markup=direction_keyboard())
             return
-        
-        
+                
 async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print("on_text:", update.message.text)
 
@@ -279,54 +261,9 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
-    """
-    app.add_handler(CommandHandler("unregister", user_manager.unregister))
-    app.add_handler(CommandHandler("add_word", add_word_command))
-    app.add_handler(CommandHandler("update_word", update_word_command))
-    app.add_handler(CommandHandler("delete_word", delete_word_command))
-    app.add_handler(CommandHandler("create_lesson", create_lesson_command))
-
- 
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, universal_text_handler))
-    """
     
     print("Telegram Bot started!", flush=True)
     app.run_polling()
 
 if __name__ == '__main__':
     main()
-    
-'''
-def insert_word(entry):
-    topic_id = get_topic_id_by_name(entry["topic"]) if entry["topic"] else None
-    if topic_id is None:
-        print(f"⚠️ Пропущено: неизвестная тема '{entry['topic']}' для слова '{entry['word']}'")
-        return
-    
-    with connection.cursor() as cursor:
-        cursor.execute(
-            """
-            INSERT INTO words (word, translate_ger, translate_rus, sex, type, topic_id) 
-            VALUES (%s, %s, %s, %s, %s, %s) 
-            ON CONFLICT DO NOTHING
-            """,
-            (
-                entry["word"],
-                entry["translate_ger"],
-                entry["translate_rus"],
-                entry["gender"],
-                entry["type"],
-                topic_id    
-            )
-        )
-        connection.commit()
-        print(f"✅ Добавлено: {entry['word']}")
-        
-
-def import_words_from_json(filepath):
-    with open(filepath, "r", encoding="utf-8") as f:
-        words = json.load(f)
-
-        for entry in words:
-            insert_word(entry)
-'''

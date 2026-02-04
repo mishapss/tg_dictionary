@@ -15,18 +15,8 @@ def exercise_keyboard():
         [InlineKeyboardButton("с русского на немецкий", callback_data="LESSON_EXERCISE:RUS_TO_GER")],
     ])
 
-def lesson_menu_keyboard() -> ReplyKeyboardMarkup:
-    return ReplyKeyboardMarkup(
-        [["Стоп урок"]],
-        resize_keyboard=True
-    )
-
 def direction_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("создать тему для урока", callback_data="LESSON_MODE:CREATE")],
         [InlineKeyboardButton("пройти урок по теме", callback_data="LESSON_MODE:START")],
-        #[InlineKeyboardButton("удалить тему урока", callback_data="LESSON_MODE:DELETE")],
-    ])   
-
-def remove_keyboard():
-    return ReplyKeyboardRemove()
+    ]) 
